@@ -1,0 +1,6 @@
+<layers>
+ <layer
+     name="vfu.events"
+     interface="vfu.events.interfaces.IAddonInstalled"
+     />
+</layers>

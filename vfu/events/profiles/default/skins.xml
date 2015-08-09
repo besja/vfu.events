@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<object name="portal_skins" meta_type="Plone Skins Tool">
+ <object name="vfu_events_staff" meta_type="Filesystem Directory View"
+    directory="vfu.events:skins/vfu_events_staff"/>
+
+ <skin-path name="*">
+  <layer name="vfu_events_staff" insert-after="custom" />
+ </skin-path>
+</object>

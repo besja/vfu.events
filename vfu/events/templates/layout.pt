@@ -1,0 +1,16 @@
+<html metal:use-macro="context/main_template/macros/master"
+      i18n:domain="vfu.events">
+<body>
+
+    <metal:block fill-slot="main">
+
+        <h1 class="documentFirstHeading" tal:content="context/title_or_id" />
+        <div class="description" tal:content="context/Description"></div>
+        <div id="parent-fieldname-text"  tal:condition="context/text" tal:content="structure python:context.text.output_relative_to(view.context)"/>
+        <!-- form -->
+        <div class="event-registration" tal:condition="context/available" tal:content="structure view/contents"></div>
+
+    </metal:block>
+
+</body>
+</html>
