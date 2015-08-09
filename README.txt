@@ -1,6 +1,3 @@
 Introduction
 ============
-
-
-
-This product may contain traces of nuts.
+Export registrations in CSV format: More info->Actions->Export registrations

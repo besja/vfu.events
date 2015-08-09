@@ -4,7 +4,7 @@
    i18n:domain="vfu.events" xmlns:i18n="http://xml.zope.org/namespaces/i18n">
 
   <!-- Basic metadata -->
-  <property name="title" i18n:translate="">Event</property>
+  <property name="title" i18n:translate="">VFU Event</property>
   <property name="description"
     i18n:translate="">Event with registration form</property>
   <property name="icon_expr">string:${portal_url}/folder_icon.png</property>

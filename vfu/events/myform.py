@@ -44,16 +44,6 @@ class MyForm(z3c.form.form.Form):
     fields['gender'].widgetFactory = z3c.form.browser.radio.RadioFieldWidget
     fields['pricing'].widgetFactory = z3c.form.browser.radio.RadioFieldWidget
 
-    def __call__(self):
-        self.update()
-
-        # Don't render anything if we are doing a redirect
-        if self.request.response.getStatus() in (300, 301, 302, 303, 304, 305, 307,):
-            return u''
-
-        self.reset = False
-        return self.render()
-
     def _redirect(self, target=''):
         if not target:
             portal_state = getMultiAdapter((self.context, self.request),
