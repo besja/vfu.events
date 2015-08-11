@@ -14,7 +14,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"POT-Creation-Date: Thu Aug  6 16:04:02 2015\n"
+"POT-Creation-Date: Tue Aug 11 10:34:17 2015\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Zope 3 Developers <zope-dev@zope.org>\n"
@@ -103,101 +103,106 @@ msgstr ""
 msgid "country"
 msgstr ""
 
-#: vfu.events:/myform.py:36
-msgid "Save"
-msgstr ""
-
-#: vfu.events:/myform.py:41
-msgid "Please correct errors"
-msgstr ""
-
-#: vfu.events:/myform.py:60
-msgid "New registration"
-msgstr ""
-
-#: vfu.events:/myform.py:78
+#: vfu.events:/myform.py:102
 msgid "Recipient address rejected by server."
 msgstr ""
 
-#: vfu.events:/myform.py:82
+#: vfu.events:/myform.py:107
 msgid "Submit complete"
+msgstr ""
+
+#: vfu.events:/myform.py:54
+msgid "Save"
+msgstr ""
+
+#: vfu.events:/myform.py:61
+msgid "Please correct errors"
+msgstr ""
+
+#: vfu.events:/myform.py:80
+msgid "New registration"
 msgstr ""
 
 #: vfu.events:/registration.py:30
 msgid "Select your gender"
 msgstr ""
 
-#: vfu.events:/registration.py:35
+#: vfu.events:/registration.py:36
 msgid "Select a type of price"
 msgstr ""
 
 #: vfu.events:/registration.py:56
+#: vfu.events:/registration.py:58
+msgid "Invalid email address."
+msgstr ""
+
+#: vfu.events:/registration.py:71
 msgid "Lastname"
 msgstr ""
 
-#: vfu.events:/registration.py:57
+#: vfu.events:/registration.py:72
 msgid "Firstname"
 msgstr ""
 
-#: vfu.events:/registration.py:58
+#: vfu.events:/registration.py:73
 msgid "Gendre"
 msgstr ""
 
-#: vfu.events:/registration.py:60
+#: vfu.events:/registration.py:75
 #: vfu.events:/skins/vfu_events_staff/registration_email.pt:9
 msgid "Job"
 msgstr ""
 
-#: vfu.events:/registration.py:61
+#: vfu.events:/registration.py:76
 #: vfu.events:/skins/vfu_events_staff/registration_email.pt:10
 msgid "Organization"
 msgstr ""
 
-#: vfu.events:/registration.py:62
+#: vfu.events:/registration.py:77
 msgid "Email"
 msgstr ""
 
-#: vfu.events:/registration.py:63
+#: vfu.events:/registration.py:78
 #: vfu.events:/skins/vfu_events_staff/registration_email.pt:11
 msgid "Phone"
 msgstr ""
 
-#: vfu.events:/registration.py:64
+#: vfu.events:/registration.py:79
 #: vfu.events:/skins/vfu_events_staff/registration_email.pt:12
 msgid "Street"
 msgstr ""
 
-#: vfu.events:/registration.py:65
+#: vfu.events:/registration.py:80
 #: vfu.events:/skins/vfu_events_staff/registration_email.pt:13
 msgid "Number"
 msgstr ""
 
-#: vfu.events:/registration.py:66
+#: vfu.events:/registration.py:81
 #: vfu.events:/skins/vfu_events_staff/registration_email.pt:14
 msgid "Zipcode"
 msgstr ""
 
-#: vfu.events:/registration.py:67
+#: vfu.events:/registration.py:82
 #: vfu.events:/skins/vfu_events_staff/registration_email.pt:15
 msgid "City"
 msgstr ""
 
-#: vfu.events:/registration.py:68
+#: vfu.events:/registration.py:83
 #: vfu.events:/skins/vfu_events_staff/registration_email.pt:16
 msgid "Country"
 msgstr ""
 
-#: vfu.events:/registration.py:70
+#: vfu.events:/registration.py:85
 #: vfu.events:/skins/vfu_events_staff/registration_email.pt:17
 msgid "Pricing"
 msgstr ""
 
-#: vfu.events:/registration.py:72
+#: vfu.events:/registration.py:87
 #: vfu.events:/skins/vfu_events_staff/registration_email.pt:18
 msgid "Comments"
 msgstr ""
 
-#: vfu.events:/registration.py:77
+#: vfu.events:/registration.py:92
 msgid "Billing address"
 msgstr ""
 

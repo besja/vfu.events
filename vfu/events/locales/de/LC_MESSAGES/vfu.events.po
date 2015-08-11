@@ -134,6 +134,11 @@ msgid "Select a type of price"
 msgstr ""
 
 #: vfu.events:/registration.py:56
+#: vfu.events:/registration.py:58
+msgid "Invalid email address."
+msgstr ""
+
+#: vfu.events:/registration.py:56
 msgid "Lastname"
 msgstr "Nachname"
 

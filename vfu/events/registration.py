@@ -1,3 +1,5 @@
+import re
+
 from five import grok
 
 import z3c.form
@@ -8,8 +10,6 @@ from zope.schema.interfaces import IContextSourceBinder
 from zope.schema.vocabulary import SimpleVocabulary, SimpleTerm
 
 from Products.CMFCore.utils import getToolByName
-from Products.CMFDefault.utils import checkEmailAddress
-from Products.CMFDefault.exceptions import EmailAddressInvalid
 
 from plone.directives import dexterity, form
 
@@ -31,16 +31,31 @@ def genderConstraint(value):
     return True
 
 def pricingConstraint(value):
+
     if not value:
         raise Invalid(_(u"Select a type of price"))
     return True
 
+# RFC 2822 local-part: dot-atom or quoted-string
+# characters allowed in atom: A-Za-z0-9!#$%&'*+-/=?^_`{|}~
+# RFC 2821 domain: max 255 characters
+_LOCAL_RE = re.compile(r'([A-Za-z0-9!#$%&\'*+\-/=?^_`{|}~]+'
+                     r'(\.[A-Za-z0-9!#$%&\'*+\-/=?^_`{|}~]+)*|'
+                     r'"[^(\|")]*")@[^@]{3,255}$')
+
+# RFC 2821 local-part: max 64 characters
+# RFC 2821 domain: sequence of dot-separated labels
+# characters allowed in label: A-Za-z0-9-, first is a letter
+# Even though the RFC does not allow it all-numeric domains do exist
+_DOMAIN_RE = re.compile(r'[^@]{1,64}@[A-Za-z0-9][A-Za-z0-9-]*'
+                                r'(\.[A-Za-z0-9][A-Za-z0-9-]*)+$')
 
 def validateaddress(value):
-    try:
-        checkEmailAddress(value)
-    except EmailAddressInvalid:
-        raise EmailAddressInvalid(value)
+
+    if not _LOCAL_RE.match(value):
+        raise Invalid(_(u'Invalid email address.'))
+    if not _DOMAIN_RE.match(value):
+        raise Invalid(_(u'Invalid email address.'))
     return True
 
 
