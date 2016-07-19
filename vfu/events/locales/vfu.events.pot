@@ -1,218 +1,238 @@
-##############################################################################
-#
-# Copyright (c) 2003-2004 Zope Foundation and Contributors.
-# All Rights Reserved.
-#
-# This software is subject to the provisions of the Zope Public License,
-# Version 2.1 (ZPL).  A copy of the ZPL should accompany this distribution.
-# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY AND ALL EXPRESS OR IMPLIED
-# WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
-# WARRANTIES OF TITLE, MERCHANTABILITY, AGAINST INFRINGEMENT, AND FITNESS
-# FOR A PARTICULAR PURPOSE.
-#
-##############################################################################
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
-"Project-Id-Version: 1.0\n"
-"POT-Creation-Date: Tue Aug 11 10:34:17 2015\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2015-08-13 12:51+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Zope 3 Developers <zope-dev@zope.org>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: zope/app/locales/extract.py\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: vfu.events\n"
 
-#: vfu.events:/config.py:11
-msgid "Member"
-msgstr ""
-
-#: vfu.events:/config.py:12
-msgid "Regular"
-msgstr ""
-
-#: vfu.events:/config.py:13
-msgid "Discount"
-msgstr ""
-
-#: vfu.events:/config.py:7
-msgid "Male"
-msgstr ""
-
-#: vfu.events:/config.py:8
-msgid "Female"
-msgstr ""
-
-#: vfu.events:/event.py:15
+#: ./../event.py:15
 msgid "Available"
 msgstr ""
 
-#: vfu.events:/export.py:37
-msgid "firstname"
-msgstr ""
-
-#: vfu.events:/export.py:37
-msgid "lastname"
-msgstr ""
-
-#: vfu.events:/export.py:37
-msgid "email"
-msgstr ""
-
-#: vfu.events:/export.py:37
-msgid "job"
-msgstr ""
-
-#: vfu.events:/export.py:37
-msgid "organizaton"
-msgstr ""
-
-#: vfu.events:/export.py:37
-msgid "gender"
-msgstr ""
-
-#: vfu.events:/export.py:38
-msgid "number"
-msgstr ""
-
-#: vfu.events:/export.py:38
-msgid "street"
-msgstr ""
-
-#: vfu.events:/export.py:38
-msgid "pricing"
-msgstr ""
-
-#: vfu.events:/export.py:38
-msgid "city"
-msgstr ""
-
-#: vfu.events:/export.py:38
-msgid "comments"
-msgstr ""
-
-#: vfu.events:/export.py:38
-msgid "zipdcode"
-msgstr ""
-
-#: vfu.events:/export.py:38
-msgid "phone"
-msgstr ""
-
-#: vfu.events:/export.py:38
-msgid "country"
-msgstr ""
-
-#: vfu.events:/myform.py:102
-msgid "Recipient address rejected by server."
-msgstr ""
-
-#: vfu.events:/myform.py:107
-msgid "Submit complete"
-msgstr ""
-
-#: vfu.events:/myform.py:54
-msgid "Save"
-msgstr ""
-
-#: vfu.events:/myform.py:61
-msgid "Please correct errors"
-msgstr ""
-
-#: vfu.events:/myform.py:80
-msgid "New registration"
-msgstr ""
-
-#: vfu.events:/registration.py:30
-msgid "Select your gender"
-msgstr ""
-
-#: vfu.events:/registration.py:36
-msgid "Select a type of price"
-msgstr ""
-
-#: vfu.events:/registration.py:56
-#: vfu.events:/registration.py:58
-msgid "Invalid email address."
-msgstr ""
-
-#: vfu.events:/registration.py:71
-msgid "Lastname"
-msgstr ""
-
-#: vfu.events:/registration.py:72
-msgid "Firstname"
-msgstr ""
-
-#: vfu.events:/registration.py:73
-msgid "Gendre"
-msgstr ""
-
-#: vfu.events:/registration.py:75
-#: vfu.events:/skins/vfu_events_staff/registration_email.pt:9
-msgid "Job"
-msgstr ""
-
-#: vfu.events:/registration.py:76
-#: vfu.events:/skins/vfu_events_staff/registration_email.pt:10
-msgid "Organization"
-msgstr ""
-
-#: vfu.events:/registration.py:77
-msgid "Email"
-msgstr ""
-
-#: vfu.events:/registration.py:78
-#: vfu.events:/skins/vfu_events_staff/registration_email.pt:11
-msgid "Phone"
-msgstr ""
-
-#: vfu.events:/registration.py:79
-#: vfu.events:/skins/vfu_events_staff/registration_email.pt:12
-msgid "Street"
-msgstr ""
-
-#: vfu.events:/registration.py:80
-#: vfu.events:/skins/vfu_events_staff/registration_email.pt:13
-msgid "Number"
-msgstr ""
-
-#: vfu.events:/registration.py:81
-#: vfu.events:/skins/vfu_events_staff/registration_email.pt:14
-msgid "Zipcode"
-msgstr ""
-
-#: vfu.events:/registration.py:82
-#: vfu.events:/skins/vfu_events_staff/registration_email.pt:15
-msgid "City"
-msgstr ""
-
-#: vfu.events:/registration.py:83
-#: vfu.events:/skins/vfu_events_staff/registration_email.pt:16
-msgid "Country"
-msgstr ""
-
-#: vfu.events:/registration.py:85
-#: vfu.events:/skins/vfu_events_staff/registration_email.pt:17
-msgid "Pricing"
-msgstr ""
-
-#: vfu.events:/registration.py:87
-#: vfu.events:/skins/vfu_events_staff/registration_email.pt:18
-msgid "Comments"
-msgstr ""
-
-#: vfu.events:/registration.py:92
+#: ./../registration.py:86
 msgid "Billing address"
 msgstr ""
 
-#: vfu.events:/skins/vfu_events_staff/registration_email.pt:3
+#: ./../registration.py:76
+#: ./../skins/vfu_events_staff/registration_email.pt:15
+msgid "City"
+msgstr ""
+
+#: ./../registration.py:81
+#: ./../skins/vfu_events_staff/registration_email.pt:18
+msgid "Comments"
+msgstr ""
+
+#: ./../registration.py:77
+#: ./../skins/vfu_events_staff/registration_email.pt:16
+msgid "Country"
+msgstr ""
+
+#: ./../config.py:13
+msgid "Discount"
+msgstr ""
+
+#: ./../registration.py:71
+msgid "Email"
+msgstr ""
+
+#: ./../profiles/default/types/vfu.events.event.xml
+msgid "Event with registration form"
+msgstr ""
+
+#: ./../config.py:8
+msgid "Female"
+msgstr ""
+
+#: ./../registration.py:66
+msgid "Firstname"
+msgstr ""
+
+#: ./../registration.py:67
+msgid "Gendre"
+msgstr ""
+
+#: ./../registration.py:50
+msgid "Invalid email address."
+msgstr ""
+
+#: ./../registration.py:69
+#: ./../skins/vfu_events_staff/registration_email.pt:9
+msgid "Job"
+msgstr ""
+
+#: ./../registration.py:65
+msgid "Lastname"
+msgstr ""
+
+#: ./../config.py:7
+msgid "Male"
+msgstr ""
+
+#: ./../config.py:11
+msgid "Member"
+msgstr ""
+
+#: ./../myform.py:81
+msgid "New registration"
+msgstr ""
+
+#: ./../registration.py:74
+#: ./../skins/vfu_events_staff/registration_email.pt:13
+msgid "Number"
+msgstr ""
+
+#: ./../registration.py:70
+#: ./../skins/vfu_events_staff/registration_email.pt:10
+msgid "Organization"
+msgstr ""
+
+#: ./../registration.py:72
+#: ./../skins/vfu_events_staff/registration_email.pt:11
+msgid "Phone"
+msgstr ""
+
+#: ./../myform.py:61
+msgid "Please correct errors"
+msgstr ""
+
+#: ./../registration.py:79
+#: ./../skins/vfu_events_staff/registration_email.pt:17
+msgid "Pricing"
+msgstr ""
+
+#: ./../myform.py:103
+msgid "Recipient address rejected by server."
+msgstr ""
+
+#: ./../profiles/default/types/vfu.events.registration.xml
+msgid "Registration"
+msgstr ""
+
+#: ./../config.py:12
+msgid "Regular"
+msgstr ""
+
+#: ./../myform.py:54
+msgid "Save"
+msgstr ""
+
+#: ./../registration.py:30
+msgid "Select your gender"
+msgstr ""
+
+#: ./../registration.py:73
+#: ./../skins/vfu_events_staff/registration_email.pt:12
+msgid "Street"
+msgstr ""
+
+#: ./../myform.py:108
+msgid "Submit complete"
+msgstr ""
+
+#: ./../profiles/default/types/vfu.events.registration.xml
+msgid "Type to store registration data"
+msgstr ""
+
+#: ./../profiles/default/types/vfu.events.event.xml
+msgid "VFU Event"
+msgstr ""
+
+#: ./../registration.py:75
+#: ./../skins/vfu_events_staff/registration_email.pt:14
+msgid "Zipcode"
+msgstr ""
+
+#: ./../export.py:48
+msgid "city"
+msgstr ""
+
+#: ./../export.py:48
+msgid "comments"
+msgstr ""
+
+#: ./../export.py:48
+msgid "country"
+msgstr ""
+
+#. Default: "Your data:"
+#: ./../skins/vfu_events_staff/registration_email.pt:8
+msgid "data"
+msgstr ""
+
+#: ./../export.py:47
+msgid "email"
+msgstr ""
+
+#: ./../export.py:47
+msgid "firstname"
+msgstr ""
+
+#: ./../export.py:47
+msgid "gender"
+msgstr ""
+
 #. Default: "Dear, ${firstname} ${lastname}"
+#: ./../skins/vfu_events_staff/registration_email.pt:3
 msgid "greeting"
 msgstr ""
 
-#: vfu.events:/skins/vfu_events_staff/registration_email.pt:6
+#: ./../export.py:47
+msgid "job"
+msgstr ""
+
+#: ./../export.py:47
+msgid "lastname"
+msgstr ""
+
+#: ./../export.py:48
+msgid "number"
+msgstr ""
+
+#: ./../export.py:47
+msgid "organization"
+msgstr ""
+
+#: ./../export.py:48
+msgid "phone"
+msgstr ""
+
+#: ./../export.py:48
+msgid "pricing"
+msgstr ""
+
+#. Default: "king regards"
+#: ./../skins/vfu_events_staff/registration_email.pt:20
+msgid "regards"
+msgstr ""
+
+#: ./../export.py:48
+msgid "street"
+msgstr ""
+
 #. Default: "Thank you for registration to ${url}!"
+#: ./../skins/vfu_events_staff/registration_email.pt:6
 msgid "thank_you"
+msgstr ""
+
+#. Default: "Your VfU-Team"
+#: ./../skins/vfu_events_staff/registration_email.pt:21
+msgid "vfu-team"
+msgstr ""
+
+#: ./../export.py:48
+msgid "zipdcode"
 msgstr ""
 

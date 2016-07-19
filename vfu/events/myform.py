@@ -46,16 +46,13 @@ class MyForm(z3c.form.form.Form):
 
     def _redirect(self, target=''):
         if not target:
-            portal_state = getMultiAdapter((self.context, self.request),
-                                           name=u'plone_portal_state')
+            portal_state = getMultiAdapter((self.context, self.request), name=u'plone_portal_state')
             target = portal_state.portal_url()
         self.request.response.redirect(target)
 
     @z3c.form.button.buttonAndHandler(_(u"Save"), name='submit')
-
     def submit(self, action):
         data, errors = self.extractData()
-
 
         if errors:
             self.status = _(u"Please correct errors")
@@ -68,7 +65,8 @@ class MyForm(z3c.form.form.Form):
         new_obj = _createObjectByType("vfu.events.registration", folder, id, lastname = data['lastname'], 
             firstname = data['firstname'], gender = data['gender'], job = data['job'], organization = data['organization'], 
             email = data['email'], phone = data['phone'],  street = data['street'],  number = data['number'],  
-            zipcode = data['zipcode'], city = data['city'], country = data['country'], pricing = data['pricing'])
+            zipcode = data['zipcode'], city = data['city'], country = data['country'], pricing = data['pricing'], 
+            comments = data['comments'])
 
         portal = getToolByName(self, 'portal_url').getPortalObject()
         encoding = portal.getProperty('email_charset', 'utf-8')
@@ -77,11 +75,10 @@ class MyForm(z3c.form.form.Form):
         mail_text = trusted_template(
             self, charset=encoding, reg_data = new_obj, event = self.context)
 
-        subject = _(u"New registration")
+        subject = self.context.translate(_(u"New registration"))
         m_to = data['email']
 
         ## notify admin about new registration
-
   
         if isinstance(mail_text, unicode):
             mail_text = mail_text.encode(encoding)

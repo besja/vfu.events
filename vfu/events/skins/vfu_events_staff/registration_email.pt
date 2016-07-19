@@ -1,19 +1,22 @@
 <tal:x tal:define="data python:options['reg_data']; event python:options['event']" i18n:domain="vfu.events">
 	<p i18n:translate="greeting">
-		Dear, <span tal:content="data/lastname" i18n:name="firstname"></span> <span i18n:name="lastname" tal:content="data/lastname"></span> 
+		Dear, <span tal:content="data/firstname" i18n:name="firstname"></span> <span i18n:name="lastname" tal:content="data/lastname"></span> 
 	</p>
 	<p i18n:translate="thank_you">
 		Thank you for registration to <tal:x i18n:name="url"><a href="" tal:attributes="href event/absolute_url" tal:content="event/title"></a> </tal:x>! 
 	</p>
-	<p>Your data:</p>
-	<p><b i18n:translate="">Job</b> <span tal:content="data/job"></span></p>
-	<p><b i18n:translate="">Organization</b> <span tal:content="data/organization"></span></p>
-	<p><b i18n:translate="">Phone</b> <span tal:content="data/phone"></span></p>
-	<p><b i18n:translate="">Street</b> <span tal:content="data/street"></span></p>
-	<p><b i18n:translate="">Number</b> <span tal:content="data/number"></span></p>
-	<p><b i18n:translate="">Zipcode</b> <span tal:content="data/zipcode"></span></p>
-	<p><b i18n:translate="">City</b> <span tal:content="data/city"></span></p>
-	<p><b i18n:translate="">Country</b> <span tal:content="data/country"></span></p>
-	<p><b i18n:translate="">Pricing</b> <span tal:content="data/getPricing"></span></p>
-	<p><b i18n:translate="">Comments</b> <span tal:content="data/comments"></span></p>
+	<p><b i18n:translate="data">Your data:</b></p>
+	<p><b i18n:translate="">Job</b><b>:</b> <span tal:content="data/job"></span></p>
+	<p><b i18n:translate="">Organization</b><b>:</b> <span tal:content="data/organization"></span></p>
+	<p><b i18n:translate="">Phone</b><b>:</b> <span tal:content="data/phone"></span></p>
+	<p><b i18n:translate="">Street</b><b>:</b> <span tal:content="data/street"></span></p>
+	<p><b i18n:translate="">Number</b><b>:</b> <span tal:content="data/number"></span></p>
+	<p><b i18n:translate="">Zipcode</b><b>:</b> <span tal:content="data/zipcode"></span></p>
+	<p><b i18n:translate="">City</b><b>:</b> <span tal:content="data/city"></span></p>
+	<p><b i18n:translate="">Country</b><b>:</b> <span tal:content="data/country"></span></p>
+	<p><b i18n:translate="">Pricing</b><b>:</b> <span tal:content="python:data.getPricing(context)"></span></p>
+	<p><b i18n:translate="">Comments</b><b>:</b> <span tal:content="data/comments"></span></p>
+
+<p i18n:translate="regards">king regards</p>
+<p i18n:translate="vfu-team">Your VfU-Team</p>
 </tal:x>

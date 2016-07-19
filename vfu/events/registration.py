@@ -30,12 +30,6 @@ def genderConstraint(value):
         raise Invalid(_(u"Select your gender"))
     return True
 
-def pricingConstraint(value):
-
-    if not value:
-        raise Invalid(_(u"Select a type of price"))
-    return True
-
 # RFC 2822 local-part: dot-atom or quoted-string
 # characters allowed in atom: A-Za-z0-9!#$%&'*+-/=?^_`{|}~
 # RFC 2821 domain: max 255 characters
@@ -82,7 +76,7 @@ class IBasicForm(form.Schema):
     city = schema.TextLine(title=_(u'City'), required=True)
     country = schema.TextLine(title=_(u'Country'), required=True)
 
-    pricing = schema.List(title=_(u'Pricing'), required=True, value_type=schema.Choice(source=pricing), constraint=pricingConstraint)
+    pricing = schema.List(title=_(u'Pricing'), required=False, value_type=schema.Choice(source=pricing))
     
     comments = schema.Text(title=_(u"Comments"), required=False)
 
@@ -118,20 +112,22 @@ class Registration(Item):
         else:
             return self.id
 
-    def getGeneder(self):
+    def getGender(self, context):
         voc = gender(self)
         terms = self.gender
         result = []
         for i in voc:
            if i.value in terms:
-               result.append(i.title)
+               result.append(context.translate(i.title))
         return ", ".join(result)
 
-    def getPricing(self):
+    def getPricing(self, context):
+        if not self.pricing:
+            return ""
         voc = pricing(self)
         terms = self.pricing
         result = []
         for i in voc:
            if i.value in terms:
-               result.append(i.title)
+               result.append(context.translate(i.title))
         return ", ".join(result)
