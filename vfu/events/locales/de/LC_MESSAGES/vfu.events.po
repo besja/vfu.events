@@ -14,7 +14,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"POT-Creation-Date: 2015-08-12 11:51+0000\n"
+"POT-Creation-Date: Thu Jul 21 14:22:07 2016\n"
 "PO-Revision-Date: 2015-09-17 08:57+0100\n"
 "Last-Translator: irina <besja@yandex.ru>\n"
 "Language-Team: German\n"
@@ -30,215 +30,331 @@ msgstr ""
 "Language: de\n"
 "X-Generator: Poedit 1.6.4\n"
 
-#: ../event.py:15
+#: vfu.events:/roundtable_registration.py:84
+msgid "Accomadation"
+msgstr ""
+
+#: vfu.events:/roundtable.py:26
+msgid "Accomadation end date"
+msgstr ""
+
+#: vfu.events:/roundtable.py:25
+msgid "Accomadation start date"
+msgstr ""
+
+#: vfu.events:/roundtable_registration.py:96
+msgid "Arrival by"
+msgstr ""
+
+#: vfu.events:/event.py:15
 msgid "Available"
 msgstr "Verfügbar"
 
-#: ../registration.py:92
+#: vfu.events:/registration.py:50
 msgid "Billing address"
 msgstr "Rechnungsadresse"
 
-#: ../registration.py:82 ../skins/vfu_events_staff/registration_email.pt:15
+#: vfu.events:/config.py:17
+msgid "Car"
+msgstr ""
+
+#: vfu.events:/registration.py:40
 msgid "City"
 msgstr "Stadt"
 
-#: ../registration.py:87 ../skins/vfu_events_staff/registration_email.pt:18
+#: vfu.events:/registration.py:45
 msgid "Comments"
 msgstr "Anmerkungen"
 
-#: ../registration.py:83 ../skins/vfu_events_staff/registration_email.pt:16
+#: vfu.events:/registration.py:41
 msgid "Country"
 msgstr "Land"
 
-#: ../config.py:13
+#: vfu.events:/roundtable.py:30
+msgid "Description for dinner"
+msgstr ""
+
+#: vfu.events:/roundtable.py:33
+msgid "Description for workshops"
+msgstr ""
+
+#: vfu.events:/roundtable_registration.py:86
+msgid "Dinner"
+msgstr ""
+
+#: vfu.events:/config.py:13
 msgid "Discount"
 msgstr "NGO / Wissenschaft"
 
-#: ../registration.py:77
+#: vfu.events:/registration.py:35
 msgid "Email"
 msgstr "E-Mail"
 
-#: ../profiles/default/types/vfu.events.event.xml
-msgid "Event with registration form"
-msgstr "Veranstaltung mit Anmeldeformular"
+#: vfu.events:/roundtable.py:23
+msgid "End date"
+msgstr ""
 
-#: ../config.py:8
+#: vfu.events:/config.py:8
 msgid "Female"
 msgstr "Frau"
 
-#: ../registration.py:72
+#: vfu.events:/registration.py:30
 msgid "Firstname"
 msgstr "Vorname"
 
-#: ../registration.py:73
+#: vfu.events:/registration.py:31
 msgid "Gendre"
 msgstr "Geschlecht"
 
-#: ../registration.py:56
+#: vfu.events:/roundtable_registration.py:90
+msgid "Intolerances / incompatibility"
+msgstr ""
+
+#: vfu.events:/utils.py:51
 msgid "Invalid email address."
 msgstr "Ungültige E-Mailadresse"
 
-#: ../registration.py:75 ../skins/vfu_events_staff/registration_email.pt:9
+#: vfu.events:/roundtable.py:28
+msgid "Is dinner available?"
+msgstr ""
+
+#: vfu.events:/roundtable.py:29
+msgid "Is vegeterian food available?"
+msgstr ""
+
+#: vfu.events:/registration.py:33
 msgid "Job"
 msgstr "Tätigkeit / Berufsbezeichnung"
 
-#: ../registration.py:71
+#: vfu.events:/registration.py:29
 msgid "Lastname"
 msgstr "Nachname"
 
-#: ../config.py:7
+#: vfu.events:/config.py:7
 msgid "Male"
 msgstr "Herr"
 
-#: ../config.py:11
+#: vfu.events:/config.py:11
 msgid "Member"
 msgstr "UNEP FI / VfU Mitglied"
 
-#: ../myform.py:80
+#: vfu.events:/myform.py:78
 msgid "New registration"
 msgstr "Veranstaltungsanmeldung"
 
-#: ../registration.py:80 ../skins/vfu_events_staff/registration_email.pt:13
+#: vfu.events:/roundtable_registration.py:178
+msgid "No"
+msgstr ""
+
+#: vfu.events:/registration.py:38
 msgid "Number"
 msgstr "Hausnummer"
 
-#: ../registration.py:76 ../skins/vfu_events_staff/registration_email.pt:10
+#: vfu.events:/roundtable.py:33
+msgid "One per line"
+msgstr ""
+
+#: vfu.events:/roundtable.py:32
+msgid "One per line. Format: number|name. For example: 1|Workshop1"
+msgstr ""
+
+#: vfu.events:/registration.py:34
 msgid "Organization"
 msgstr "Organisation"
 
-#: ../registration.py:78 ../skins/vfu_events_staff/registration_email.pt:11
+#: vfu.events:/roundtable_registration.py:82
+msgid "Participation"
+msgstr ""
+
+#: vfu.events:/registration.py:36
 msgid "Phone"
 msgstr "Telefon"
 
-#: ../myform.py:61
+#: vfu.events:/config.py:19
+msgid "Plain"
+msgstr ""
+
+#: vfu.events:/myform.py:58
 msgid "Please correct errors"
 msgstr "Bitte füllen Sie Ihre Angaben korrekt aus"
 
-#: ../registration.py:85 ../skins/vfu_events_staff/registration_email.pt:17
+#: vfu.events:/registration.py:43
 msgid "Pricing"
 msgstr "Beitragsstaffelung"
 
-#: ../myform.py:102
+#: vfu.events:/myform.py:99
 msgid "Recipient address rejected by server."
 msgstr "Die Adresse wurde vom Server zurückgewiesen."
 
-#: ../profiles/default/types/vfu.events.registration.xml
-msgid "Registration"
-msgstr "Anmeldung"
-
-#: ../config.py:12
+#: vfu.events:/config.py:12
 msgid "Regular"
 msgstr "Regulär"
 
-#: ../myform.py:54
+#: vfu.events:/myform.py:53
 msgid "Save"
 msgstr "Anmelden"
 
-#: ../registration.py:36
-msgid "Select a type of price"
-msgstr "Wählen Sie einen Rabatt"
+#: vfu.events:/roundtable_registration.py:64
+msgid "Select at least a one date"
+msgstr ""
 
-#: ../registration.py:30
+#: vfu.events:/roundtable_registration.py:82
+msgid "Select one or both dates"
+msgstr ""
+
+#: vfu.events:/roundtable_registration.py:92
+msgid "Select workshops to participate"
+msgstr ""
+
+#: vfu.events:/utils.py:66
 msgid "Select your gender"
 msgstr "Wählen Sie Ihr Geschlecht"
 
-#: ../registration.py:79 ../skins/vfu_events_staff/registration_email.pt:12
+#: vfu.events:/config.py:14
+msgid "Speaker"
+msgstr ""
+
+#: vfu.events:/roundtable.py:22
+msgid "Start date"
+msgstr ""
+
+#: vfu.events:/registration.py:37
 msgid "Street"
 msgstr "Strasse (Rechnungsadresse)"
 
-#: ../myform.py:107
+#: vfu.events:/myform.py:104
 msgid "Submit complete"
 msgstr "Übermittlung erfolgreich abgeschlossen"
 
-#: ../profiles/default/types/vfu.events.registration.xml
-msgid "Type to store registration data"
-msgstr "Inhaltstyp zur Anmeldedatenspeicherung"
+#: vfu.events:/config.py:18
+msgid "Train"
+msgstr ""
 
-#: ../profiles/default/types/vfu.events.event.xml
-msgid "VFU Event"
-msgstr "VfU Veranstaltung"
+#: vfu.events:/skins/vfu_events_staff/registration_roundtable_email.pt:20
+msgid "Vegetarian"
+msgstr ""
 
-#: ../registration.py:81 ../skins/vfu_events_staff/registration_email.pt:14
+#: vfu.events:/roundtable_registration.py:88
+msgid "Vegetarian food"
+msgstr ""
+
+#: vfu.events:/roundtable.py:32
+msgid "Workshops"
+msgstr ""
+
+#: vfu.events:/roundtable_registration.py:176
+msgid "Yes"
+msgstr ""
+
+#: vfu.events:/registration.py:39
 msgid "Zipcode"
 msgstr "PLZ"
 
-#: ../export.py:38
+#: vfu.events:/export.py:108
+msgid "accomadation"
+msgstr ""
+
+#: vfu.events:/export.py:113
+msgid "arrival"
+msgstr ""
+
+#: vfu.events:/export.py:57
 msgid "city"
 msgstr "Stadt"
 
-#: ../export.py:38
+#: vfu.events:/export.py:60
 msgid "comments"
 msgstr "Anmerkungen"
 
-#: ../export.py:38
+#: vfu.events:/export.py:58
 msgid "country"
 msgstr "Land"
 
 #. Default: "Your data:"
-#: ../skins/vfu_events_staff/registration_email.pt:8
+#: vfu.events:/skins/vfu_events_staff/registration_email.pt:8
 msgid "data"
 msgstr "Ihre Daten:"
 
-#: ../export.py:37
+#: vfu.events:/export.py:109
+msgid "dinner"
+msgstr ""
+
+#: vfu.events:/export.py:52
 msgid "email"
 msgstr "E-Mail"
 
-#: ../export.py:37
+#: vfu.events:/export.py:48
 msgid "firstname"
 msgstr "Vorname"
 
-#: ../export.py:37
+#: vfu.events:/export.py:49
 msgid "gender"
 msgstr "Geschlecht"
 
 #. Default: "Dear, ${firstname} ${lastname}"
-#: ../skins/vfu_events_staff/registration_email.pt:3
+#: vfu.events:/skins/vfu_events_staff/registration_email.pt:3
 msgid "greeting"
 msgstr "Sehr geehrte/r ${firstname} ${lastname}"
 
-#: ../export.py:37
+#: vfu.events:/export.py:111
+msgid "intolerances"
+msgstr ""
+
+#: vfu.events:/export.py:50
 msgid "job"
 msgstr "Tätigkeit / Berufsbezeichnung"
 
-#: ../export.py:37
+#: vfu.events:/export.py:47
 msgid "lastname"
 msgstr "Nachname"
 
-#: ../export.py:38
+#: vfu.events:/export.py:55
 msgid "number"
 msgstr "Hausnummer"
 
-#: ../export.py:37
-msgid "organizaton"
-msgstr "Organisation"
+#: vfu.events:/export.py:51
+msgid "organization"
+msgstr ""
 
-#: ../export.py:38
+#: vfu.events:/export.py:107
+msgid "participation"
+msgstr ""
+
+#: vfu.events:/export.py:53
 msgid "phone"
 msgstr "Telefon"
 
-#: ../export.py:38
+#: vfu.events:/export.py:59
 msgid "pricing"
 msgstr "Beitragsstaffelung"
 
 #. Default: "king regards"
-#: ../skins/vfu_events_staff/registration_email.pt:20
+#: vfu.events:/skins/vfu_events_staff/registration_email.pt:20
 msgid "regards"
 msgstr "Mit freundlichen Grüßen"
 
-#: ../export.py:38
+#: vfu.events:/export.py:54
 msgid "street"
 msgstr "Strasse"
 
 #. Default: "Thank you for registration to ${url}!"
-#: ../skins/vfu_events_staff/registration_email.pt:6
+#: vfu.events:/skins/vfu_events_staff/registration_email.pt:6
 msgid "thank_you"
 msgstr "Vielen Dank für Ihre Anmeldung"
 
+#: vfu.events:/export.py:110
+msgid "vegetarian"
+msgstr ""
+
 #. Default: "Your VfU-Team"
-#: ../skins/vfu_events_staff/registration_email.pt:21
+#: vfu.events:/skins/vfu_events_staff/registration_email.pt:21
 msgid "vfu-team"
 msgstr "Ihr VfU-Team"
 
-#: ../export.py:38
+#: vfu.events:/export.py:112
+msgid "workshops"
+msgstr ""
+
+#: vfu.events:/export.py:56
 msgid "zipdcode"
 msgstr "PLZ"

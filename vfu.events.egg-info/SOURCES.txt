@@ -18,5 +18,8 @@ vfu/events/export.py
 vfu/events/interfaces.py
 vfu/events/myform.py
 vfu/events/registration.py
+vfu/events/roundtable.py
+vfu/events/roundtable_reg_form.py
+vfu/events/roundtable_registration.py
 vfu/events/tests.py
 vfu/events/utils.py

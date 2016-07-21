@@ -46,6 +46,19 @@
       class=".export.ExportRegistrations"
       permission="cmf.ManagePortal"
       />
+  <browser:page
+       for="vfu.events.roundtable.IVFURoundtableEvent"
+       name="view"
+       class=".roundtable_reg_form.form_frame"
+       permission="zope2.View"
+       />
+
+  <browser:page
+      for="vfu.events.roundtable.IVFURoundtableEvent"
+      name="export_registrations"
+      class=".export.ExportRegistrations"
+      permission="cmf.ManagePortal"
+      />
 
   <!-- -*- extra stuff goes here -*- -->
 

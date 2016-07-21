@@ -36,13 +36,12 @@ class ExportRegistrations(BrowserView):
 
             j+=1
         return data
-
-    def exportCSV(self, container):
+    def getDataForEvent(self, container):
         site = component.getSiteManager()
         ptool = getToolByName(site, 'portal_catalog')
         result = ptool(portal_type="vfu.events.registration", 
             path = "/".join(container.getPhysicalPath()), 
-            order_on ="getObjPositionInParent", limit=5)
+            order_on ="getObjPositionInParent")
         items = []
         headers = [
                 self.context.translate(_(u'lastname')), 
@@ -84,6 +83,87 @@ class ExportRegistrations(BrowserView):
 
             data = self.encode(data)
             items.append(data)
+        return items
+    def getDataForRoundtable(self, container):
+        site = component.getSiteManager()
+        ptool = getToolByName(site, 'portal_catalog')
+        result = ptool(portal_type="vfu.events.roundtableregistration", 
+            path = "/".join(container.getPhysicalPath()), 
+            order_on ="getObjPositionInParent")
+        items = []
+        headers = [
+                self.context.translate(_(u'lastname')), 
+                self.context.translate(_(u'firstname')), 
+                self.context.translate(_(u'gender')), 
+                self.context.translate(_(u'job')), 
+                self.context.translate(_(u'organization')),  
+                self.context.translate(_(u'email')),
+                self.context.translate(_(u'phone')),  
+                self.context.translate(_(u'street')),  
+                self.context.translate(_(u'number')),  
+                self.context.translate(_(u'zipdcode')),  
+                self.context.translate(_(u'city')),  
+                self.context.translate(_(u'country')), 
+                self.context.translate(_(u'participation')),
+                self.context.translate(_(u'accomadation')),
+                self.context.translate(_(u'dinner')),
+                self.context.translate(_(u'vegetarian')),
+                self.context.translate(_(u'intolerances')),
+                self.context.translate(_(u'workshops')),
+                self.context.translate(_(u'arrival')),
+                self.context.translate(_(u'pricing')), 
+                self.context.translate(_(u'comments'))
+                ]
+        headers = self.encode(headers)
+        items.append(headers)
+
+        for i in result:
+            obj = i.getObject()
+            gender = obj.getGender(self.context)
+            pricing = obj.getPricing(self.context)
+            arrival = obj.getArrival(self.context)
+            dinner = obj.getDinner(self.context)
+            vegetarian  = obj.getVegetarian(self.context)
+            workshops = '' 
+            if obj.workshops: 
+                workshops = obj.getWorkshopsValues(self.context)
+            participation = ''
+            if obj.participation:
+                participation = "; ".join(obj.participation)
+            accomadation = ''
+            if obj.accomadation:
+                accomadation = "; ".join(obj.accomadation)
+            data = [obj.lastname, 
+                    obj.firstname, 
+                    gender,  
+                    obj.job, 
+                    obj.organization, 
+                    obj.email, 
+                    obj.phone, 
+                    obj.street, 
+                    obj.number, 
+                    obj.zipcode, 
+                    obj.city, 
+                    obj.country, 
+                    participation, 
+                    accomadation, 
+                    dinner, 
+                    vegetarian, 
+                    obj.intolerances, 
+                    workshops,
+                    arrival, 
+                    pricing, 
+                    obj.comments] 
+
+            data = self.encode(data)
+            items.append(data)
+        return items
+    def exportCSV(self, container):
+
+        if container.portal_type == "vfu.events.roundtable":
+            items = self.getDataForRoundtable(container)
+        else:
+            items = self.getDataForEvent(container)
 
         ramdisk = StringIO.StringIO()
         writer = csv.writer(ramdisk, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
