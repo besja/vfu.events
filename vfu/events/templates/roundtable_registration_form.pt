@@ -1,5 +1,4 @@
-  test
-      <metal:define define-macro="titlelessform">
+ <metal:define define-macro="titlelessform">
         <div class="portalMessage"
              tal:condition="view/status" tal:content="view/status">
         </div>

@@ -14,7 +14,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"POT-Creation-Date: Thu Jul 21 14:22:07 2016\n"
+"POT-Creation-Date: Tue Jul 26 16:23:01 2016\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Zope 3 Developers <zope-dev@zope.org>\n"
@@ -60,7 +60,7 @@ msgid "Female"
 msgstr ""
 
 #: vfu.events:/event.py:15
-#: vfu.events:/roundtable.py:20
+#: vfu.events:/roundtable.py:31
 msgid "Available"
 msgstr ""
 
@@ -282,49 +282,49 @@ msgstr ""
 msgid "Billing address"
 msgstr ""
 
-#: vfu.events:/roundtable.py:22
+#: vfu.events:/roundtable.py:23
+msgid "Invalid value for workshops"
+msgstr ""
+
+#: vfu.events:/roundtable.py:33
 msgid "Start date"
 msgstr ""
 
-#: vfu.events:/roundtable.py:23
+#: vfu.events:/roundtable.py:34
 msgid "End date"
 msgstr ""
 
-#: vfu.events:/roundtable.py:25
+#: vfu.events:/roundtable.py:36
 msgid "Accomadation start date"
 msgstr ""
 
-#: vfu.events:/roundtable.py:26
+#: vfu.events:/roundtable.py:37
 msgid "Accomadation end date"
 msgstr ""
 
-#: vfu.events:/roundtable.py:28
+#: vfu.events:/roundtable.py:39
 msgid "Is dinner available?"
 msgstr ""
 
-#: vfu.events:/roundtable.py:29
+#: vfu.events:/roundtable.py:40
 msgid "Is vegeterian food available?"
 msgstr ""
 
-#: vfu.events:/roundtable.py:30
+#: vfu.events:/roundtable.py:41
 msgid "Description for dinner"
 msgstr ""
 
-#: vfu.events:/roundtable.py:32
+#: vfu.events:/roundtable.py:43
 msgid "One per line. Format: number|name. For example: 1|Workshop1"
 msgstr ""
 
-#: vfu.events:/roundtable.py:32
+#: vfu.events:/roundtable.py:43
 #: vfu.events:/roundtable_registration.py:92
 #: vfu.events:/skins/vfu_events_staff/registration_roundtable_email.pt:21
 msgid "Workshops"
 msgstr ""
 
-#: vfu.events:/roundtable.py:33
-msgid "One per line"
-msgstr ""
-
-#: vfu.events:/roundtable.py:33
+#: vfu.events:/roundtable.py:44
 msgid "Description for workshops"
 msgstr ""
 

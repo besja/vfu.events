@@ -14,7 +14,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"POT-Creation-Date: Thu Jul 21 14:22:07 2016\n"
+"POT-Creation-Date: Tue Jul 26 16:23:01 2016\n"
 "PO-Revision-Date: 2015-09-17 08:57+0100\n"
 "Last-Translator: irina <besja@yandex.ru>\n"
 "Language-Team: German\n"
@@ -34,11 +34,11 @@ msgstr ""
 msgid "Accomadation"
 msgstr ""
 
-#: vfu.events:/roundtable.py:26
+#: vfu.events:/roundtable.py:37
 msgid "Accomadation end date"
 msgstr ""
 
-#: vfu.events:/roundtable.py:25
+#: vfu.events:/roundtable.py:36
 msgid "Accomadation start date"
 msgstr ""
 
@@ -70,11 +70,11 @@ msgstr "Anmerkungen"
 msgid "Country"
 msgstr "Land"
 
-#: vfu.events:/roundtable.py:30
+#: vfu.events:/roundtable.py:41
 msgid "Description for dinner"
 msgstr ""
 
-#: vfu.events:/roundtable.py:33
+#: vfu.events:/roundtable.py:44
 msgid "Description for workshops"
 msgstr ""
 
@@ -90,7 +90,7 @@ msgstr "NGO / Wissenschaft"
 msgid "Email"
 msgstr "E-Mail"
 
-#: vfu.events:/roundtable.py:23
+#: vfu.events:/roundtable.py:34
 msgid "End date"
 msgstr ""
 
@@ -114,11 +114,15 @@ msgstr ""
 msgid "Invalid email address."
 msgstr "Ungültige E-Mailadresse"
 
-#: vfu.events:/roundtable.py:28
+#: vfu.events:/roundtable.py:23
+msgid "Invalid value for workshops"
+msgstr ""
+
+#: vfu.events:/roundtable.py:39
 msgid "Is dinner available?"
 msgstr ""
 
-#: vfu.events:/roundtable.py:29
+#: vfu.events:/roundtable.py:40
 msgid "Is vegeterian food available?"
 msgstr ""
 
@@ -150,11 +154,7 @@ msgstr ""
 msgid "Number"
 msgstr "Hausnummer"
 
-#: vfu.events:/roundtable.py:33
-msgid "One per line"
-msgstr ""
-
-#: vfu.events:/roundtable.py:32
+#: vfu.events:/roundtable.py:43
 msgid "One per line. Format: number|name. For example: 1|Workshop1"
 msgstr ""
 
@@ -214,7 +214,7 @@ msgstr "Wählen Sie Ihr Geschlecht"
 msgid "Speaker"
 msgstr ""
 
-#: vfu.events:/roundtable.py:22
+#: vfu.events:/roundtable.py:33
 msgid "Start date"
 msgstr ""
 
@@ -238,7 +238,7 @@ msgstr ""
 msgid "Vegetarian food"
 msgstr ""
 
-#: vfu.events:/roundtable.py:32
+#: vfu.events:/roundtable.py:43
 msgid "Workshops"
 msgstr ""
 
