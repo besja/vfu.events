@@ -49,17 +49,27 @@ class RoundtableRegistrationForm(z3c.form.form.Form):
     fields['vegetarian'].widgetFactory = z3c.form.browser.checkbox.SingleCheckBoxFieldWidget
     fields['workshops'].widgetFactory = z3c.form.browser.checkbox.CheckBoxFieldWidget
     fields['arrival'].widgetFactory = z3c.form.browser.radio.RadioFieldWidget
+    
+    
 
     def _redirect(self, target=''):
         if not target:
             portal_state = getMultiAdapter((self.context, self.request), name=u'plone_portal_state')
             target = portal_state.portal_url()
         self.request.response.redirect(target)
-
+                   
     def updateWidgets(self):
+      
         super(RoundtableRegistrationForm, self).updateWidgets()
         if not self.context.dinner_available: 
             self.widgets["dinner"].mode =  z3c.form.interfaces.HIDDEN_MODE
+        
+        if self.context.dinner_description: 
+            self.fields['dinner'].field.description = self.context.dinner_description    
+
+        if self.context.workshops_description:
+            self.fields['workshops'].field.description = self.context.workshops_description    
+
         if not self.context.dinner_available or not self.context.vegfood_available: 
             self.widgets["vegetarian"].mode =  z3c.form.interfaces.HIDDEN_MODE
 
@@ -67,6 +77,7 @@ class RoundtableRegistrationForm(z3c.form.form.Form):
 
         if len(workshops) == 0: 
             self.widgets["workshops"].mode =  z3c.form.interfaces.HIDDEN_MODE
+        self.widgets["dinner"].description = "test"
 
     @z3c.form.button.buttonAndHandler(_(u"Save"), name='submit')
     def submit(self, action):
