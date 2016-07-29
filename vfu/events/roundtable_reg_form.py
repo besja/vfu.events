@@ -77,7 +77,6 @@ class RoundtableRegistrationForm(z3c.form.form.Form):
 
         if len(workshops) == 0: 
             self.widgets["workshops"].mode =  z3c.form.interfaces.HIDDEN_MODE
-        self.widgets["dinner"].description = "test"
 
     @z3c.form.button.buttonAndHandler(_(u"Save"), name='submit')
     def submit(self, action):
