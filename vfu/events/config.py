@@ -11,6 +11,11 @@ def get_vocabs():
 	    		('member', _(u'Member')), 
 	    		('regular', _(u'Regular')),
 	    		('discount', _(u'Discount')),
+	    	),
+	    'pricing_roundtable': (
+	    		('member', _(u'Member')), 
+	    		('regular', _(u'Regular')),
+	    		('discount', _(u'Discount')),
 	    		('speaker', _(u'Speaker'))
 	    	),
 	    'arrival': (

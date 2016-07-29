@@ -25,7 +25,7 @@ def gender(context):
 
 @grok.provider(IContextSourceBinder)
 def pricing(context):
-    return list_to_voc('pricing')
+    return list_to_voc('pricing_roundtable')
 
 @grok.provider(IContextSourceBinder)
 def participation(context):
@@ -78,7 +78,9 @@ class IRoundtableRegistrationForm(form.Schema):
     zipcode = schema.TextLine(title=_(u'Zipcode'), required=True)
     city = schema.TextLine(title=_(u'City'), required=True)
     country = schema.TextLine(title=_(u'Country'), required=True)
-
+    
+    pricing = schema.List(title=_(u'Pricing'), required=False, value_type=schema.Choice(source=pricing))
+    
     participation= schema.List(title=_(u'Participation'), description=_(u'Select one or both dates'), required=True, value_type=schema.Choice(source=participation) ,  constraint=validate_choice)
 
     accomadation= schema.List(title=_(u'Accomadation'), description=_(u'Select one or both dates'), required=False, value_type=schema.Choice(source=accomadation))
@@ -90,8 +92,6 @@ class IRoundtableRegistrationForm(form.Schema):
     intolerances = schema.Text(title=_(u"Intolerances / incompatibility"), required=False)
 
     workshops = schema.List(title=_(u'Workshops'), description=_(u'Select workshops to participate'), required=False, value_type=schema.Choice(source=workshops))
-
-    pricing = schema.List(title=_(u'Pricing'), required=False, value_type=schema.Choice(source=pricing))
     
     arrival = schema.List(title=_(u'Arrival by'), required=False, value_type=schema.Choice(source=arrival))
 
