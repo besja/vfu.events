@@ -83,7 +83,7 @@ class IRoundtableRegistrationForm(form.Schema):
     
     participation= schema.List(title=_(u'Participation'), description=_(u'Select one or both dates'), required=True, value_type=schema.Choice(source=participation) ,  constraint=validate_choice)
 
-    accomadation= schema.List(title=_(u'Accomadation'), description=_(u'Select one or both dates'), required=False, value_type=schema.Choice(source=accomadation))
+    accomadation= schema.List(title=_(u'Accomadation'), description=_(u'Select an accomadation date'), required=False, value_type=schema.Choice(source=accomadation))
 
     dinner = schema.Bool(title=_(u'Dinner'), required=False)
 
