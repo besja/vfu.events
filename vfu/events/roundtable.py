@@ -72,5 +72,5 @@ class VFURoundtableEvent(Container):
             lines = self.workshops.split('\n')
             for l in lines:
                 key, value = l.split("|")
-                options.update({key:value})
+                options.update({int(key):value})
         return options

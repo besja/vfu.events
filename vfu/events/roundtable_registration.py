@@ -19,6 +19,8 @@ from vfu.events.config import get_vocabs
 from vfu.events.utils import validateaddress, list_to_voc, genderConstraint 
 from plone.autoform import directives
 
+import collections
+
 @grok.provider(IContextSourceBinder)
 def gender(context):
     return list_to_voc('gender')
@@ -50,9 +52,13 @@ def accomadation(context):
 @grok.provider(IContextSourceBinder)
 def workshops(context): 
     options  = context.getWorkshopsList()
+
+    options = collections.OrderedDict(sorted(options.items()))
+
     terms = []
     for i in options:
         terms.append(SimpleTerm(value=i, title=options[i].encode('utf-8')))
+
     return SimpleVocabulary(terms)
 
 @grok.provider(IContextSourceBinder)
@@ -189,4 +195,4 @@ class RoundtableRegistration(Item):
             for i in self.workshops:
                 if workshops_dict.has_key(i):
                     result.append(workshops_dict[i])
-        return ''.join(result)
+        return ', '.join(result)
