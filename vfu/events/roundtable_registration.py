@@ -183,7 +183,7 @@ class RoundtableRegistration(Item):
         else:
             return _(u'No')
     def getVegetarian(self, context):
-        if self.dinner:
+        if self.vegetarian:
             return _(u'Yes')
         else:
             return _(u'No')
