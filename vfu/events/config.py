@@ -22,6 +22,11 @@ def get_vocabs():
 	    		('car', _(u'Car')), 
 	    		('train', _(u'Train')), 
 	    		('plain', _(u'Plain')), 
+	    	), 
+
+	    'title': (
+	    		('dr', _(u'Dr')), 
+	    		('prof.dr.', _(u' Prof. Dr.')),
 	    	)
 	}
 	return vocabs

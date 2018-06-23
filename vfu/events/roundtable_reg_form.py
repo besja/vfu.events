@@ -1,3 +1,5 @@
+#!/usr/bin/python
+# -*- coding: utf8 -*-
 import random
 import zope.schema
 import zope.interface
@@ -26,6 +28,8 @@ from vfu.events import MessageFactory as _
 from vfu.events.utils import trusted
 from vfu.events.roundtable_registration import IRoundtableRegistrationForm
 
+from plone.autoform.form import AutoExtensibleForm
+
 class RoundtableRegistrationForm(z3c.form.form.Form):
     """ Display event with form """
 
@@ -42,14 +46,15 @@ class RoundtableRegistrationForm(z3c.form.form.Form):
     ### ! fieldeset 
 
     fields['gender'].widgetFactory = z3c.form.browser.radio.RadioFieldWidget
+    fields['title_of_person'].widgetFactory = z3c.form.browser.radio.RadioFieldWidget
     fields['pricing'].widgetFactory = z3c.form.browser.radio.RadioFieldWidget
     fields['participation'].widgetFactory = z3c.form.browser.checkbox.CheckBoxFieldWidget
-    fields['accomadation'].widgetFactory = z3c.form.browser.checkbox.CheckBoxFieldWidget
+    #fields['accomadation'].widgetFactory = z3c.form.browser.checkbox.CheckBoxFieldWidget
     fields['dinner'].widgetFactory = z3c.form.browser.checkbox.SingleCheckBoxFieldWidget
     fields['vegetarian'].widgetFactory = z3c.form.browser.checkbox.SingleCheckBoxFieldWidget
-    fields['workshops'].widgetFactory = z3c.form.browser.checkbox.CheckBoxFieldWidget
-    fields['arrival'].widgetFactory = z3c.form.browser.radio.RadioFieldWidget
-    
+    #fields['workshops'].widgetFactory = z3c.form.browser.checkbox.CheckBoxFieldWidget
+    #fields['arrival'].widgetFactory = z3c.form.browser.radio.RadioFieldWidget
+    #fields['privacy1'].widgetFactory = z3c.form.browser.checkbox.SingleCheckBoxFieldWidget
     
 
     def _redirect(self, target=''):
@@ -61,22 +66,26 @@ class RoundtableRegistrationForm(z3c.form.form.Form):
     def updateWidgets(self):
       
         super(RoundtableRegistrationForm, self).updateWidgets()
+
+
+        self.widgets['privacy1'].field.description=_(u'Ich habe die Angaben zum <a href="https://vfu.de/datenschutzerklaerung">Datenschutz</a> gelesen und stimme der vorübergehenden Speicherung meiner Daten zu.') 
+
         if not self.context.dinner_available: 
             self.widgets["dinner"].mode =  z3c.form.interfaces.HIDDEN_MODE
         
         if self.context.dinner_description: 
             self.fields['dinner'].field.description = self.context.dinner_description    
 
-        if self.context.workshops_description:
-            self.fields['workshops'].field.description = self.context.workshops_description    
+        #if self.context.workshops_description:
+        #    self.fields['workshops'].field.description = self.context.workshops_description    
 
         if not self.context.dinner_available or not self.context.vegfood_available: 
             self.widgets["vegetarian"].mode =  z3c.form.interfaces.HIDDEN_MODE
 
-        workshops = self.context.getWorkshopsList()
+        #workshops = self.context.getWorkshopsList()
 
-        if len(workshops) == 0: 
-            self.widgets["workshops"].mode =  z3c.form.interfaces.HIDDEN_MODE
+        #if len(workshops) == 0: 
+        #    self.widgets["workshops"].mode =  z3c.form.interfaces.HIDDEN_MODE
 
     @z3c.form.button.buttonAndHandler(_(u"Save"), name='submit')
     def submit(self, action):
@@ -91,12 +100,11 @@ class RoundtableRegistrationForm(z3c.form.form.Form):
         id = str(random.randint(0, 99999999))
 
         new_obj = _createObjectByType("vfu.events.roundtableregistration", folder, id, lastname = data['lastname'], 
-            firstname = data['firstname'], gender = data['gender'], job = data['job'], organization = data['organization'], 
+            firstname = data['firstname'], gender = data['gender'], title_of_person = data['title_of_person'], job = data['job'], organization = data['organization'], 
             email = data['email'], phone = data['phone'],  street = data['street'],  number = data['number'],  
             zipcode = data['zipcode'], city = data['city'], country = data['country'], pricing = data['pricing'], 
-            participation = data['participation'], accomadation = data['accomadation'],  dinner = data['dinner'], 
-            vegetarian = data['vegetarian'], intolerances = data['intolerances'], workshops = data['workshops'], 
-            arrival = data['arrival'], 
+            participation = data['participation'],  dinner = data['dinner'], 
+            vegetarian = data['vegetarian'],  
             comments = data['comments'])
 
         portal = getToolByName(self, 'portal_url').getPortalObject()

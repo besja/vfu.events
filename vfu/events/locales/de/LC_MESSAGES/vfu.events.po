@@ -90,7 +90,7 @@ msgstr "Ich nehme am Abendessen teil"
 
 #: ../config.py:13
 msgid "Discount"
-msgstr "NGO / Wissenschaft"
+msgstr "NGO / Wissenschaft / Forschungseinrichtung"
 
 #: ../registration.py:35 ../roundtable_registration.py:74
 msgid "Email"
@@ -204,7 +204,7 @@ msgstr "Bitte füllen Sie Ihre Angaben korrekt aus"
 #: ../registration.py:43 ../roundtable_registration.py:82
 #: ../skins/vfu_events_staff/registration_email.pt:17
 msgid "Pricing"
-msgstr "Beitragsstaffelung"
+msgstr "Rabatt, sofern zutreffend"
 
 #: ../myform.py:99 ../roundtable_reg_form.py:130
 msgid "Recipient address rejected by server."
@@ -380,7 +380,7 @@ msgstr "Telefon"
 
 #: ../export.py:59
 msgid "pricing"
-msgstr "Beitragsstaffelung"
+msgstr "Rabatt, sofern zutreffend"
 
 #. Default: "king regards"
 #: ../skins/vfu_events_staff/registration_email.pt:20

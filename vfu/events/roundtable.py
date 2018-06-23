@@ -52,6 +52,7 @@ class VFURoundtableEvent(Container):
     	start = self.start
     	end = self.end
         options = []
+        options.append(_(u"Both days"))
     	dates = daterange(start, end + timedelta(days=1) ) 
         for single_date in dates:
             options.append(get_localized_time(single_date))

@@ -95,23 +95,20 @@ class ExportRegistrations(BrowserView):
                 self.context.translate(_(u'lastname')), 
                 self.context.translate(_(u'firstname')), 
                 self.context.translate(_(u'gender')), 
+                self.context.translate(_(u'title_of_person')), 
                 self.context.translate(_(u'job')), 
                 self.context.translate(_(u'organization')),  
                 self.context.translate(_(u'email')),
                 self.context.translate(_(u'phone')),  
                 self.context.translate(_(u'street')),  
                 self.context.translate(_(u'number')),  
-                self.context.translate(_(u'zipdcode')),  
+                self.context.translate(_(u'zipcode')),  
                 self.context.translate(_(u'city')),  
                 self.context.translate(_(u'country')), 
                 self.context.translate(_(u'participation')),
-                self.context.translate(_(u'accomadation')),
+                self.context.translate(_(u'pricing')), 
                 self.context.translate(_(u'dinner')),
                 self.context.translate(_(u'vegetarian')),
-                self.context.translate(_(u'intolerances')),
-                self.context.translate(_(u'workshops')),
-                self.context.translate(_(u'arrival')),
-                self.context.translate(_(u'pricing')), 
                 self.context.translate(_(u'comments'))
                 ]
         headers = self.encode(headers)
@@ -121,21 +118,18 @@ class ExportRegistrations(BrowserView):
             obj = i.getObject()
             gender = obj.getGender(self.context)
             pricing = obj.getPricing(self.context)
-            arrival = obj.getArrival(self.context)
+            #arrival = obj.getArrival(self.context)
             dinner = obj.getDinner(self.context)
+            title_of_person = obj.getPersonTitle(self.context)
             vegetarian  = obj.getVegetarian(self.context)
-            workshops = '' 
-            if obj.workshops: 
-                workshops = obj.getWorkshopsValues(self.context)
             participation = ''
             if obj.participation:
                 participation = "; ".join(obj.participation)
-            accomadation = ''
-            if obj.accomadation:
-                accomadation = "; ".join(obj.accomadation)
+
             data = [obj.lastname, 
                     obj.firstname, 
                     gender,  
+                    title_of_person, 
                     obj.job, 
                     obj.organization, 
                     obj.email, 
@@ -146,13 +140,9 @@ class ExportRegistrations(BrowserView):
                     obj.city, 
                     obj.country, 
                     participation, 
-                    accomadation, 
-                    dinner, 
-                    vegetarian, 
-                    obj.intolerances, 
-                    workshops,
-                    arrival, 
                     pricing, 
+                    dinner, 
+                    vegetarian,
                     obj.comments] 
 
             data = self.encode(data)

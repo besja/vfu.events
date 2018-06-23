@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# -*- coding: utf8 -*-
+
 import re
 
 from five import grok
@@ -18,12 +21,17 @@ from vfu.events import MessageFactory as _
 from vfu.events.config import get_vocabs 
 from vfu.events.utils import validateaddress, list_to_voc, genderConstraint 
 from plone.autoform import directives
+from plone.supermodel import model
 
 import collections
 
 @grok.provider(IContextSourceBinder)
 def gender(context):
     return list_to_voc('gender')
+
+@grok.provider(IContextSourceBinder)
+def title(context):
+    return list_to_voc('title')
 
 @grok.provider(IContextSourceBinder)
 def pricing(context):
@@ -70,50 +78,70 @@ def validate_choice(value):
         raise Invalid(_(u'Select at least a one date'))
     return True
 
+def validate_privacy(value):
+    if not value:
+        raise Invalid(_(u'Diese Box muss ausgewählt werden.'))
+    return True
+
+def validate_title(value):
+    if not value:
+        raise Invalid(_(u"Select your title"))
+    return True
+
 class IRoundtableRegistrationForm(form.Schema):
+    #accomadation= schema.List(title=_(u'Accomadation'), description=_(u'Select an accomadation date'), required=False, value_type=schema.Choice(source=accomadation))
+    participation= schema.List(title=_(u'Participation'), description=_(u'Select one or both dates'), required=True, value_type=schema.Choice(source=participation) ,  constraint=validate_choice)
+    pricing = schema.List(title=_(u'Pricing'), required=False, value_type=schema.Choice(source=pricing))
+  
+    # Dinner
+    dinner = schema.Bool(title=_(u'Ich nehme am gemeinsamen Abendessen teil'), required=False)
+
+    vegetarian = schema.Bool(title=_(u'Ich wünsche vegetarische Kost'), required=False)
+
+    ## fieldset не работает! добавила заголовок через js 
+    #form.fieldset(
+    #    'contacts',
+    #    label=_(u"Contacts"),
+    #    fields=['lastname', 'firstname']
+    #)  
+
+    # Contacts
+    gender = schema.List(title=_(u'Gendre'), required=True, value_type=schema.Choice(source=gender), constraint=genderConstraint)
+    title_of_person = schema.List(title=_(u'Title'), required=True, value_type=schema.Choice(source=title), constraint=validate_title)
     lastname = schema.TextLine(title=_(u'Lastname'), required=True)
     firstname = schema.TextLine(title=_(u'Firstname'), required=True)
-    gender = schema.List(title=_(u'Gendre'), required=True, value_type=schema.Choice(source=gender), constraint=genderConstraint)
-    
-    job = schema.TextLine(title=_(u'Job'), required=False)
     organization = schema.TextLine(title=_(u'Organization'), required=False)
+    job = schema.TextLine(title=_(u'Position'), required=False)
     email = schema.TextLine(title=_(u'Email'), required=True, constraint=validateaddress)
     phone = schema.TextLine(title=_(u'Phone'), required=False)
-    street = schema.TextLine(title=_(u'Street'), required=True)
+
+    #Billing address
+    organization_alt = schema.TextLine(title=_(u'Organisation alternative'), required=False)
+    street = schema.TextLine(title=_(u'Strasse'), required=True)
     number = schema.TextLine(title=_(u'Number'), required=True)
     zipcode = schema.TextLine(title=_(u'Zipcode'), required=True)
     city = schema.TextLine(title=_(u'City'), required=True)
     country = schema.TextLine(title=_(u'Country'), required=True)
     
-    pricing = schema.List(title=_(u'Pricing'), required=False, value_type=schema.Choice(source=pricing))
+
+    #intolerances = schema.Text(title=_(u"Intolerances / incompatibility"), required=False)
+
+    #workshops = schema.List(title=_(u'Workshops'), description=_(u'Select workshops to participate'), required=False, value_type=schema.Choice(source=workshops))
     
-    participation= schema.List(title=_(u'Participation'), description=_(u'Select one or both dates'), required=True, value_type=schema.Choice(source=participation) ,  constraint=validate_choice)
-
-    accomadation= schema.List(title=_(u'Accomadation'), description=_(u'Select an accomadation date'), required=False, value_type=schema.Choice(source=accomadation))
-
-    dinner = schema.Bool(title=_(u'Dinner'), required=False)
-
-    vegetarian = schema.Bool(title=_(u'Vegetarian food'), required=False)
-
-    intolerances = schema.Text(title=_(u"Intolerances / incompatibility"), required=False)
-
-    workshops = schema.List(title=_(u'Workshops'), description=_(u'Select workshops to participate'), required=False, value_type=schema.Choice(source=workshops))
-    
-    arrival = schema.List(title=_(u'Arrival by'), required=False, value_type=schema.Choice(source=arrival))
+    #arrival = schema.List(title=_(u'Arrival by'), required=False, value_type=schema.Choice(source=arrival))
 
     comments = schema.Text(title=_(u"Comments"), required=False)
+
+    privacy1 = schema.Bool(title=_(u'Politic'), required=True, constraint=validate_privacy)
+    privacy2 = schema.Bool(title=_(u'Ich erkläre mich damit einverstanden, dass folgende Daten (Name, Firma) anderen Teilnehmern dieser Veranstaltung (etwa in Form einer Teilnehmerliste) zur Verfügung gestellt werden.'), required=False)
+    privacy3 = schema.Bool(title=_(u'Ich erkläre mich mit der Nutzung meiner oben genannten Daten einverstanden, um Einladungen für weitere Veranstaltungen oder um Informationen des VfU zu erhalten.'), required=False)
 
     form.widget(gender=z3c.form.browser.radio.RadioFieldWidget)
     form.widget(pricing=z3c.form.browser.radio.RadioFieldWidget)
 
     form.widget(participation=z3c.form.browser.checkbox.CheckBoxFieldWidget)
-    form.widget(accomadation=z3c.form.browser.checkbox.CheckBoxFieldWidget)
-    form.widget(workshops=z3c.form.browser.checkbox.CheckBoxFieldWidget)
-
-    form.fieldset('billing_address',
-            label=_(u"Billing address"),
-            fields=['street', 'number', 'zipcode', 'city', 'country']
-        )
+    #form.widget(accomadation=z3c.form.browser.checkbox.CheckBoxFieldWidget)
+    #form.widget(workshops=z3c.form.browser.checkbox.CheckBoxFieldWidget)
 
 class IRoundtableRegistration(IRoundtableRegistrationForm):
     """
@@ -149,7 +177,16 @@ class RoundtableRegistration(Item):
            if i.value in terms:
                result.append(context.translate(i.title))
         return ", ".join(result)
+    def getPersonTitle(self, context):
 
+        voc = list_to_voc('title')
+        terms = self.title_of_person
+        result = []
+        for i in voc:
+           if i.value in terms:
+               result.append(context.translate(i.title))
+        return ", ".join(result)   
+           
     def getPricing(self, context):
         if not self.pricing:
             return ""

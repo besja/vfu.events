@@ -1,1 +1,17 @@
 <metal:block use-macro="context/@@ploneform-macros/titlelessform" />
+
+<script type="text/javascript">
+(function ($) {
+	 $(function(){	 
+
+	 	$("#formfield-form-widgets-privacy1 .formHelp").hide(); 
+	    var desc1 = $("#formfield-form-widgets-privacy1 .formHelp").html(); 
+	 	$("#formfield-form-widgets-privacy1 label").html(desc1); 
+
+	 	$("#formfield-form-widgets-dinner").before("<h3>Essen</h3>");
+	 	$("#formfield-form-widgets-gender").before("<h3>Kontaktdaten</h3>")
+	 	$("#formfield-form-widgets-organization_alt").before("<h3>Rechnungsadresse</h3>")
+
+	 })
+})(jQuery);
+</script>
