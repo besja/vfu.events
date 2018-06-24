@@ -419,3 +419,28 @@ msgstr "Workshops"
 #: ../export.py:56
 msgid "zipdcode"
 msgstr "PLZ"
+
+#: vfu.events:/skins/vfu_events_staff/registration_roundtable_email.pt:10
+msgid "Contacts"
+msgstr "Kontaktdaten"
+
+#: vfu.events:/skins/vfu_events_staff/registration_roundtable_email.pt:15
+msgid "Billing information"
+msgstr "Rechnungsadresse"
+
+#: vfu.events:/roundtable_registration.py:88
+msgid "Select your title"
+msgstr "Select your title"
+
+#: vfu.events:/roundtable_registration.py:119
+#: vfu.events:/skins/vfu_events_staff/registration_roundtable_email.pt:16
+msgid "Organisation alternative"
+msgstr "Organisation (falls abweichend von oben)"
+
+#: vfu.events:/roundtable_registration.py:110
+msgid "Person Title"
+msgstr "Titel"
+
+#: vfu.events:/roundtable.py:55
+msgid "Both days"
+msgstr "an beiden Veranstaltungstagen"
