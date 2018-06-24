@@ -107,7 +107,7 @@ class IRoundtableRegistrationForm(form.Schema):
 
     # Contacts
     gender = schema.List(title=_(u'Gendre'), required=True, value_type=schema.Choice(source=gender), constraint=genderConstraint)
-    title_of_person = schema.List(title=_(u'Title'), required=True, value_type=schema.Choice(source=title), constraint=validate_title)
+    title_of_person = schema.List(title=_(u'Person Title'), required=True, value_type=schema.Choice(source=title), constraint=validate_title)
     lastname = schema.TextLine(title=_(u'Lastname'), required=True)
     firstname = schema.TextLine(title=_(u'Firstname'), required=True)
     organization = schema.TextLine(title=_(u'Organization'), required=False)
