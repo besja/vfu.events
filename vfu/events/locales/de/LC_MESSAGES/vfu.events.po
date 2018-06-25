@@ -444,3 +444,7 @@ msgstr "Titel"
 #: vfu.events:/roundtable.py:55
 msgid "Both days"
 msgstr "an beiden Veranstaltungstagen"
+
+#: vfu.events:/export.py:98
+msgid "title_of_person"
+msgstr "Titel"

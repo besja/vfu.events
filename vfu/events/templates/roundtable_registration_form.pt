@@ -4,9 +4,8 @@
 (function ($) {
 	 $(function(){	 
 
-	 	$("#formfield-form-widgets-privacy1 .formHelp").hide(); 
-	    var desc1 = $("#formfield-form-widgets-privacy1 .formHelp").html(); 
-	 	$("#formfield-form-widgets-privacy1 label").html(desc1); 
+	
+	 	$("#formfield-form-widgets-privacy1 label").html('Ich habe die Angaben zum <a href="https://vfu.de/datenschutzerklaerung">Datenschutz</a> gelesen und stimme der vorübergehenden Speicherung meiner Daten zu.'); 
 
 	 	$("#formfield-form-widgets-dinner").before("<h3>Essen</h3>");
 	 	$("#formfield-form-widgets-gender").before("<h3>Kontaktdaten</h3>")

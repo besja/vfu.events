@@ -68,7 +68,7 @@ class RoundtableRegistrationForm(z3c.form.form.Form):
         super(RoundtableRegistrationForm, self).updateWidgets()
 
 
-        self.widgets['privacy1'].field.description=_(u'Ich habe die Angaben zum <a href="https://vfu.de/datenschutzerklaerung">Datenschutz</a> gelesen und stimme der vorübergehenden Speicherung meiner Daten zu.') 
+        #self.widgets['privacy1'].field.description=_(u'Ich habe die Angaben zum <a href="https://vfu.de/datenschutzerklaerung">Datenschutz</a> gelesen und stimme der vorübergehenden Speicherung meiner Daten zu.') 
 
         if not self.context.dinner_available: 
             self.widgets["dinner"].mode =  z3c.form.interfaces.HIDDEN_MODE

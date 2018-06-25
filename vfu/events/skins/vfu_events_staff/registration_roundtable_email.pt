@@ -1,9 +1,15 @@
 <tal:x tal:define="data python:options['reg_data']; event python:options['event']" i18n:domain="vfu.events">
 	<p i18n:translate="greeting">
-		Dear, <span tal:content="data/firstname" i18n:name="firstname"></span> <span i18n:name="lastname" tal:content="data/lastname"></span> 
+		Dear, <span tal:content="data/firstname" i18n:name="firstname"></span> <span i18n:name="lastname" tal:content="data/lastname"></span>! 
 	</p>
-	<p i18n:translate="thank_you">
-		Thank you for registration to <tal:x i18n:name="url"><a href="" tal:attributes="href event/absolute_url" tal:content="event/title"></a> </tal:x>! 
+	<p>
+	Vielen dank für Ihr Interesse an einer Teilnahme am UNEP FI / VfU Roundtable.
+	</p>
+	<p>
+	Bitte beachten Sie, dass ihre Anmeldung zu dieser Veranstaltung die Kenntnisnahme und Akzeptierung unserer Datenschutz-Richtlinie voraussetzt.
+	</p>
+	<p>
+	Bitte beachten Sie weiterhin, dass diese Email noch keine finale Bestätigung Ihrer Anmeldung darstellt. Diese erhalten Sie von uns zeitnah, gemeinsam mit der Rechnung über die Teilnahmegebühren, in einer weiteren Email.
 	</p>
 	<p><b i18n:translate="">Participation</b><b>:</b> <span tal:content="python:data.getParticipation(context)"></span></p>
 	<p><b i18n:translate="">Pricing</b><b>:</b> <span tal:content="python:data.getPricing(context)"></span></p>
@@ -26,6 +32,9 @@
 	<!-- <p><b i18n:translate="">Arrival by</b><b>:</b> <span tal:content="python:data.getArrival(context)"></span></p> -->
 	<p><b i18n:translate="">Comments</b><b>:</b> <span tal:content="data/comments"></span></p>
 
-<p i18n:translate="regards">king regards</p>
-<p i18n:translate="vfu-team">Your VfU-Team</p>
+	<p>Wir freuen uns auf Sie.</p>
+
+	<p>Mit besten Grüßen,</p>
+
+	<p>Ihr Roundtable Team</p>
 </tal:x>
