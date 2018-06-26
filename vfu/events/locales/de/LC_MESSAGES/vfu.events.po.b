@@ -71,7 +71,7 @@ msgid "Firstname"
 msgstr "Vorname"
 
 #: ../registration.py:73
-msgid "Gendre"
+msgid "Gender"
 msgstr "Geschlecht"
 
 #: ../registration.py:56

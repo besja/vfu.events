@@ -9,7 +9,7 @@
 
 	 	$("#formfield-form-widgets-dinner").before("<h3>Essen</h3>");
 	 	$("#formfield-form-widgets-gender").before("<h3>Kontaktdaten</h3>")
-	 	$("#formfield-form-widgets-organization_alt").before("<h3>Rechnungsadresse</h3>")
+	 	$("#formfield-form-widgets-organization_alt").before("<h3>(Rechnungs-) Adresse</h3>")
 
 	 })
 })(jQuery);

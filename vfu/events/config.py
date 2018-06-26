@@ -14,7 +14,6 @@ def get_vocabs():
 	    	),
 	    'pricing_roundtable': (
 	    		('member', _(u'Member')), 
-	    		('regular', _(u'Regular')),
 	    		('discount', _(u'Discount')),
 	    		('speaker', _(u'Speaker'))
 	    	),
@@ -26,7 +25,7 @@ def get_vocabs():
 
 	    'title': (
 	    		('dr', _(u'Dr')), 
-	    		('prof.dr.', _(u' Prof. Dr.')),
+	    		('prof.dr.', _(u'Prof. Dr.')),
 	    	)
 	}
 	return vocabs
