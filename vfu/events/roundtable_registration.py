@@ -199,8 +199,12 @@ class RoundtableRegistration(Item):
         return ", ".join(result)
 
     def getParticipation(self, context):
-        return ", ".join(self.participation)
-
+   
+        options = []
+        for i in self.participation:
+            options.append(context.translate(i))
+        return ", ".join(options)
+        
     def getAccomadation(self, context):
         return ", ".join(self.accomadation)
 
