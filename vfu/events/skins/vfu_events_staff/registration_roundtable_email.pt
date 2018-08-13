@@ -6,7 +6,7 @@
 	Vielen dank für Ihr Interesse an einer Teilnahme am UNEP FI / VfU Roundtable.
 	</p>
 	<p>
-	Im Zusammenhang mir ihrer Anmeldung haben wir folgende Daten von Ihnen gespeichert - womit sich Sie sich durch Anklicken des entsprechenden Auswahlfeldes in der Anmeldemaske einverstanden erklärt hatten:
+	Im Zusammenhang mir Ihrer Anmeldung haben wir folgende Daten von Ihnen gespeichert - womit sich Sie sich durch Anklicken des entsprechenden Auswahlfeldes in der Anmeldemaske einverstanden erklärt hatten:
 	</p>
 	<p><b i18n:translate="">Participation</b><b>:</b> <span tal:content="python:data.getParticipation(context)"></span></p>
 	<p><b i18n:translate="">Pricing</b><b>:</b> <span tal:content="python:data.getPricing(context)"></span></p>
