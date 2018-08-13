@@ -109,7 +109,9 @@ class ExportRegistrations(BrowserView):
                 self.context.translate(_(u'pricing')), 
                 self.context.translate(_(u'dinner')),
                 self.context.translate(_(u'vegetarian')),
-                self.context.translate(_(u'comments'))
+                self.context.translate(_(u'comments')), 
+                self.context.translate(_(u'privacy2')), 
+                self.context.translate(_(u'privacy3')), 
                 ]
         headers = self.encode(headers)
         items.append(headers)
@@ -143,7 +145,9 @@ class ExportRegistrations(BrowserView):
                     pricing, 
                     dinner, 
                     vegetarian,
-                    obj.comments] 
+                    obj.comments, 
+                    obj.getPrivacy2(self.context), 
+                    obj.getPrivacy3(self.context)] 
 
             data = self.encode(data)
             items.append(data)

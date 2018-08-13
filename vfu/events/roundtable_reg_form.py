@@ -105,7 +105,10 @@ class RoundtableRegistrationForm(z3c.form.form.Form):
             zipcode = data['zipcode'], city = data['city'], country = data['country'], pricing = data['pricing'], 
             participation = data['participation'],  dinner = data['dinner'], 
             vegetarian = data['vegetarian'],  
-            comments = data['comments'])
+            comments = data['comments'], 
+            privacy2 = data['privacy2'], 
+            privacy3 = data['privacy3'], 
+            privacy1 = data['privacy1'])
 
         portal = getToolByName(self, 'portal_url').getPortalObject()
         encoding = portal.getProperty('email_charset', 'utf-8')

@@ -448,3 +448,11 @@ msgstr "PLZ"
 #: ../export.py:56
 msgid "zipdcode"
 msgstr "PLZ"
+
+#: ./../export.py:113
+msgid "privacy2"
+msgstr "Datenweitergabe"
+
+#: ./../export.py:114
+msgid "privacy3"
+msgstr "Datenweiterverwendung"

@@ -228,7 +228,16 @@ class RoundtableRegistration(Item):
             return _(u'Yes')
         else:
             return _(u'No')
-
+    def getPrivacy2(self, context):
+        if self.privacy2:
+            return _(u'Yes')
+        else:
+            return _(u'No')
+    def getPrivacy3(self, context):
+        if self.privacy3:
+            return _(u'Yes')
+        else:
+            return _(u'No')
     def getWorkshopsValues(self, context):
         result = []
         workshops_dict = self.aq_parent.getWorkshopsList()
