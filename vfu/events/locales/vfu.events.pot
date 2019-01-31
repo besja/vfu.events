@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-06-25 18:40+0000\n"
+"POT-Creation-Date: 2018-08-13 09:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,7 +34,7 @@ msgstr ""
 msgid "Billing address"
 msgstr ""
 
-#: ./../skins/vfu_events_staff/registration_roundtable_email.pt:21
+#: ./../skins/vfu_events_staff/registration_roundtable_email.pt:18
 msgid "Billing information"
 msgstr ""
 
@@ -58,7 +58,7 @@ msgstr ""
 msgid "Comments"
 msgstr ""
 
-#: ./../skins/vfu_events_staff/registration_roundtable_email.pt:16
+#: ./../skins/vfu_events_staff/registration_roundtable_email.pt:13
 msgid "Contacts"
 msgstr ""
 
@@ -80,7 +80,7 @@ msgstr ""
 msgid "Diese Box muss ausgewählt werden."
 msgstr ""
 
-#: ./../skins/vfu_events_staff/registration_roundtable_email.pt:29
+#: ./../skins/vfu_events_staff/registration_roundtable_email.pt:26
 msgid "Dinner"
 msgstr ""
 
@@ -92,7 +92,7 @@ msgstr ""
 msgid "Dr"
 msgstr ""
 
-#: ./../skins/vfu_events_staff/registration_roundtable_email.pt:20
+#: ./../skins/vfu_events_staff/registration_roundtable_email.pt:17
 msgid "E-Mail"
 msgstr ""
 
@@ -165,7 +165,7 @@ msgstr ""
 
 #: ./../registration.py:33
 #: ./../skins/vfu_events_staff/registration_email.pt:9
-#: ./../skins/vfu_events_staff/registration_roundtable_email.pt:18
+#: ./../skins/vfu_events_staff/registration_roundtable_email.pt:15
 msgid "Job"
 msgstr ""
 
@@ -183,11 +183,11 @@ msgid "Member"
 msgstr ""
 
 #: ./../myform.py:78
-#: ./../roundtable_reg_form.py:117
+#: ./../roundtable_reg_form.py:120
 msgid "New registration"
 msgstr ""
 
-#: ./../roundtable_registration.py:221
+#: ./../roundtable_registration.py:225
 msgid "No"
 msgstr ""
 
@@ -202,7 +202,7 @@ msgid "One per line. Format: number|name. For example: 1|Workshop1"
 msgstr ""
 
 #: ./../roundtable_registration.py:119
-#: ./../skins/vfu_events_staff/registration_roundtable_email.pt:22
+#: ./../skins/vfu_events_staff/registration_roundtable_email.pt:19
 msgid "Organisation alternative"
 msgstr ""
 
@@ -213,7 +213,7 @@ msgid "Organization"
 msgstr ""
 
 #: ./../roundtable_registration.py:93
-#: ./../skins/vfu_events_staff/registration_roundtable_email.pt:14
+#: ./../skins/vfu_events_staff/registration_roundtable_email.pt:11
 msgid "Participation"
 msgstr ""
 
@@ -255,7 +255,7 @@ msgid "Prof. Dr."
 msgstr ""
 
 #: ./../myform.py:99
-#: ./../roundtable_reg_form.py:138
+#: ./../roundtable_reg_form.py:141
 msgid "Recipient address rejected by server."
 msgstr ""
 
@@ -306,12 +306,12 @@ msgstr ""
 
 #: ./../registration.py:37
 #: ./../skins/vfu_events_staff/registration_email.pt:12
-#: ./../skins/vfu_events_staff/registration_roundtable_email.pt:23
+#: ./../skins/vfu_events_staff/registration_roundtable_email.pt:20
 msgid "Street"
 msgstr ""
 
 #: ./../myform.py:104
-#: ./../roundtable_reg_form.py:143
+#: ./../roundtable_reg_form.py:146
 msgid "Submit complete"
 msgstr ""
 
@@ -332,7 +332,7 @@ msgstr ""
 msgid "VFU Roundtable Event"
 msgstr ""
 
-#: ./../skins/vfu_events_staff/registration_roundtable_email.pt:30
+#: ./../skins/vfu_events_staff/registration_roundtable_email.pt:27
 msgid "Vegetarian"
 msgstr ""
 
@@ -340,7 +340,7 @@ msgstr ""
 msgid "Workshops"
 msgstr ""
 
-#: ./../roundtable_registration.py:219
+#: ./../roundtable_registration.py:223
 msgid "Yes"
 msgstr ""
 
@@ -417,6 +417,14 @@ msgstr ""
 msgid "pricing"
 msgstr ""
 
+#: ./../export.py:113
+msgid "privacy2"
+msgstr ""
+
+#: ./../export.py:114
+msgid "privacy3"
+msgstr ""
+
 #. Default: "king regards"
 #: ./../skins/vfu_events_staff/registration_email.pt:20
 msgid "regards"
@@ -454,12 +462,4 @@ msgstr ""
 
 #: ./../export.py:56
 msgid "zipdcode"
-msgstr ""
-
-#: ./../export.py:113
-msgid "privacy2"
-msgstr ""
-
-#: ./../export.py:114
-msgid "privacy3"
 msgstr ""
