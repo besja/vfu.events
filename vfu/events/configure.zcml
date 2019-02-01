@@ -59,7 +59,18 @@
       class=".export.ExportRegistrations"
       permission="cmf.ManagePortal"
       />
-
+  <browser:page
+       for="vfu.events.member_event.IVFUMemberEvent"
+       name="view"
+       class=".member_event_registration_form.form_frame"
+       permission="zope2.View"
+       />
+  <browser:page
+      for="vfu.events.member_event.IVFUMemberEvent"
+      name="export_registrations"
+      class=".export.ExportRegistrations"
+      permission="cmf.ManagePortal"
+      />
   <!-- -*- extra stuff goes here -*- -->
 
 </configure>

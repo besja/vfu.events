@@ -1,0 +1,25 @@
+<tal:x tal:define="data python:options['reg_data']; event python:options['event']" i18n:domain="vfu.events">
+	<p i18n:translate="greeting">
+		Dear, <span tal:content="data/firstname" i18n:name="firstname"></span> <span i18n:name="lastname" tal:content="data/lastname"></span>! 
+	</p>
+	<p>
+	Vielen dank für Ihr Interesse an einer Teilnahme am UNEP FI / VfU Roundtable.
+	</p>
+	<p>
+	Im Zusammenhang mir Ihrer Anmeldung haben wir folgende Daten von Ihnen gespeichert - womit sich Sie sich durch Anklicken des entsprechenden Auswahlfeldes in der Anmeldemaske einverstanden erklärt hatten:
+	</p>
+	<h3><b i18n:translate="">Contacts</b></h3>
+	<p><b i18n:translate="">Organization</b><b>:</b> <span tal:content="data/organization"></span></p>
+	<p><b i18n:translate="">Job</b><b>:</b> <span tal:content="data/job"></span></p>
+	<p><b i18n:translate="">E-Mail</b><b>:</b> <span tal:content="data/email"></span></p>
+
+	<p>
+	Bitte beachten Sie weiterhin, dass diese Email noch keine finale Bestätigung Ihrer Anmeldung darstellt. Diese erhalten Sie von uns zeitnah, gemeinsam mit der Rechnung über die Teilnahmegebühren, in einer weiteren Email.
+	</p>
+
+	<p>Wir freuen uns auf Sie.</p>
+
+	<p>Mit besten Grüßen,</p>
+
+	<p>Ihr Roundtable Team</p>
+</tal:x>

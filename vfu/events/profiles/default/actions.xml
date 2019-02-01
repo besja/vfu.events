@@ -5,7 +5,7 @@
       <property name="title">Export registrations</property>
       <property name="description"/>
       <property name="url_expr">string:${object_url}/export_registrations</property>
-      <property name="available_expr">python:getattr(object, "portal_type", "") == "vfu.events.event"</property>
+      <property name="available_expr">python:(getattr(object, "portal_type", "") == "vfu.events.event") or (getattr(object, "portal_type", "") == "vfu.events.member_event") or (getattr(object, "portal_type", "") == "vfu.events.roundtable")</property>
       <property name="icon_expr"/>
 
       <property name="permissions">

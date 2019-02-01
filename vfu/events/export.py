@@ -36,6 +36,38 @@ class ExportRegistrations(BrowserView):
 
             j+=1
         return data
+    def getDataForMemberEvent(self, container):
+        site = component.getSiteManager()
+        ptool = getToolByName(site, 'portal_catalog')
+        result = ptool(portal_type="vfu.events.member_event_registration", 
+            path = "/".join(container.getPhysicalPath()), 
+            order_on ="getObjPositionInParent")
+        items = []
+        headers = [
+                self.context.translate(_(u'lastname')), 
+                self.context.translate(_(u'firstname')), 
+                self.context.translate(_(u'gender')), 
+                self.context.translate(_(u'job')), 
+                self.context.translate(_(u'organization')),  
+                self.context.translate(_(u'email'))
+                ]
+        headers = self.encode(headers)
+        items.append(headers)
+
+        for i in result:
+            obj = i.getObject()
+            gender = obj.getGender(self.context)
+            data = [obj.lastname, 
+                    obj.firstname, 
+                    gender,  
+                    obj.job, 
+                    obj.organization, 
+                    obj.email, 
+                    ] 
+
+            data = self.encode(data)
+            items.append(data)
+        return items
     def getDataForEvent(self, container):
         site = component.getSiteManager()
         ptool = getToolByName(site, 'portal_catalog')
@@ -156,7 +188,9 @@ class ExportRegistrations(BrowserView):
 
         if container.portal_type == "vfu.events.roundtable":
             items = self.getDataForRoundtable(container)
-        else:
+        if container.portal_type == "vfu.events.member_event":
+            items = self.getDataForMemberEvent(container)
+        if container.portal_type == "vfu.events.event":
             items = self.getDataForEvent(container)
 
         ramdisk = StringIO.StringIO()

@@ -10,6 +10,8 @@
   <!-- -*- extra stuff goes here -*- -->
   <object name="vfu.events.event" meta_type="Dexterity FTI" />
   <object name="vfu.events.roundtable" meta_type="Dexterity FTI" />
+  <object name="vfu.events.member_event" meta_type="Dexterity FTI" />
   <object name="vfu.events.registration" meta_type="Dexterity FTI" />
   <object name="vfu.events.roundtableregistration" meta_type="Dexterity FTI" />
+  <object name="vfu.events.member_event_registration" meta_type="Dexterity FTI" />
 </object>
