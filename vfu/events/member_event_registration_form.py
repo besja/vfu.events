@@ -1,3 +1,5 @@
+#!/usr/bin/python
+# -*- coding: utf8 -*-
 import random
 import zope.schema
 import zope.interface
@@ -63,7 +65,7 @@ class RegistrationForm(z3c.form.form.Form):
 
         new_obj = _createObjectByType("vfu.events.member_event_registration", folder, id, lastname = data['lastname'], 
             firstname = data['firstname'], gender = data['gender'], job = data['job'], organization = data['organization'], 
-            email = data['email'])
+            email = data['email'], privacy2 = data['privacy2'], privacy3 = data['privacy3'], privacy1 = data['privacy1'])
 
         portal = getToolByName(self, 'portal_url').getPortalObject()
         encoding = portal.getProperty('email_charset', 'utf-8')
@@ -86,17 +88,17 @@ class RegistrationForm(z3c.form.form.Form):
         mail_settings = registry.forInterface(IMailSchema, prefix='plone')
         m_from = mail_settings.email_from_address
 
-        #try:
-        #    host.send(mail_text, m_to, m_from, subject=subject,
-        #              charset=encoding, immediate=True, msg_type="text/html")
+        try:
+           host.send(mail_text, m_to, m_from, subject=subject,
+                      charset=encoding, immediate=True, msg_type="text/html")
 
-        #except SMTPRecipientsRefused:
+        except SMTPRecipientsRefused:
 
-        #    raise SMTPRecipientsRefused(
-        #       _(u'Recipient address rejected by server.'))
+           raise SMTPRecipientsRefused(
+               _(u'Recipient address rejected by server.'))
 
-        #except SMTPException as e:
-        #    raise(e)
+        except SMTPException as e:
+           raise(e)
         
         IStatusMessage(self.request).add(_(u"Submit complete"), type='info')
         return self._redirect(target=self.context.absolute_url())

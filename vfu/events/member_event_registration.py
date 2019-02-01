@@ -1,3 +1,5 @@
+#!/usr/bin/python
+# -*- coding: utf8 -*-
 from five import grok
 
 import z3c.form
@@ -25,6 +27,11 @@ def gender(context):
 def pricing(context):
     return list_to_voc('pricing')
 
+def validate_privacy(value):
+    if not value:
+        raise Invalid(_(u'Diese Box muss ausgewählt werden.'))
+    return True
+    
 class IBasicForm(form.Schema):
     lastname = schema.TextLine(title=_(u'Lastname'), required=True)
     firstname = schema.TextLine(title=_(u'Firstname'), required=True)
@@ -34,6 +41,9 @@ class IBasicForm(form.Schema):
     organization = schema.TextLine(title=_(u'Organization'), required=False)
     email = schema.TextLine(title=_(u'Email'), required=True, constraint=validateaddress)
     
+    privacy1 = schema.Bool(title=_(u'Politic'), required=True, constraint=validate_privacy)
+    privacy2 = schema.Bool(title=_(u'Ich erkläre mich damit einverstanden, dass folgende Daten (Name, Firma) anderen Teilnehmern dieser Veranstaltung (etwa in Form einer Teilnehmerliste) zur Verfügung gestellt werden.'), required=False)
+    privacy3 = schema.Bool(title=_(u'Ich erkläre mich mit der Nutzung meiner oben genannten Daten einverstanden, um Einladungen für weitere Veranstaltungen oder um Informationen des VfU zu erhalten.'), required=False)
 
     form.widget(gender=z3c.form.browser.radio.RadioFieldWidget)
 
@@ -72,3 +82,13 @@ class MemberEventRegistration(Item):
                result.append(context.translate(i.title))
         return ", ".join(result)
 
+    def getPrivacy2(self, context):
+        if self.privacy2:
+            return _(u'Yes')
+        else:
+            return _(u'No')
+    def getPrivacy3(self, context):
+        if self.privacy3:
+            return _(u'Yes')
+        else:
+            return _(u'No')

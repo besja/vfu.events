@@ -1,1 +1,12 @@
 <metal:block use-macro="context/@@ploneform-macros/titlelessform" />
+
+<script type="text/javascript">
+(function ($) {
+	 $(function(){	 
+
+	
+	 	$("#formfield-form-widgets-privacy1 label").html('Ich habe die Angaben zum <a href="https://vfu.de/datenschutzerklaerung">Datenschutz</a> gelesen und stimme der vorübergehenden Speicherung meiner Daten zu.'); 
+
+	 })
+})(jQuery);
+</script>

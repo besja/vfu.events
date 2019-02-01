@@ -49,7 +49,9 @@ class ExportRegistrations(BrowserView):
                 self.context.translate(_(u'gender')), 
                 self.context.translate(_(u'job')), 
                 self.context.translate(_(u'organization')),  
-                self.context.translate(_(u'email'))
+                self.context.translate(_(u'email')),
+                self.context.translate(_(u'privacy2')), 
+                self.context.translate(_(u'privacy3'))
                 ]
         headers = self.encode(headers)
         items.append(headers)
@@ -63,6 +65,8 @@ class ExportRegistrations(BrowserView):
                     obj.job, 
                     obj.organization, 
                     obj.email, 
+                    obj.getPrivacy2(self.context), 
+                    obj.getPrivacy3(self.context)
                     ] 
 
             data = self.encode(data)
