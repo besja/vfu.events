@@ -63,8 +63,8 @@ class RegistrationForm(z3c.form.form.Form):
 
         id = str(random.randint(0, 99999999))
 
-        new_obj = _createObjectByType("vfu.events.member_event_registration", folder, id, lastname = data['lastname'], 
-            firstname = data['firstname'], gender = data['gender'], job = data['job'], organization = data['organization'], 
+        new_obj = _createObjectByType("vfu.events.member_event_registration", folder, id, gender = data['gender'], lastname = data['lastname'], 
+            firstname = data['firstname'], job = data['job'], organization = data['organization'], 
             email = data['email'], privacy2 = data['privacy2'], privacy3 = data['privacy3'], privacy1 = data['privacy1'])
 
         portal = getToolByName(self, 'portal_url').getPortalObject()

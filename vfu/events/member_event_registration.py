@@ -33,9 +33,10 @@ def validate_privacy(value):
     return True
     
 class IBasicForm(form.Schema):
+    gender = schema.List(title=_(u'Gender'), required=True, value_type=schema.Choice(source=gender), constraint=genderConstraint)
     lastname = schema.TextLine(title=_(u'Lastname'), required=True)
     firstname = schema.TextLine(title=_(u'Firstname'), required=True)
-    gender = schema.List(title=_(u'Gender'), required=True, value_type=schema.Choice(source=gender), constraint=genderConstraint)
+    
     
     job = schema.TextLine(title=_(u'Job'), required=False)
     organization = schema.TextLine(title=_(u'Organization'), required=False)
