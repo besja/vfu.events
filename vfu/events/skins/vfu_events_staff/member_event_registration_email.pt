@@ -1,13 +1,13 @@
 <tal:x tal:define="data python:options['reg_data']; event python:options['event']" i18n:domain="vfu.events">
 	<p>Guten Tag,
 	<p>
-	vielen dank für Ihr Interesse.
+	vielen dank für Ihr Interesse <a href="" tal:attributes="href event/absolute_url" tal:content="event/Title"></a>.
 	</p>
 	<p>
 	Im Zusammenhang mir Ihrer Anmeldung haben wir folgende Daten von Ihnen gespeichert - womit sich Sie sich durch Anklicken des entsprechenden Auswahlfeldes in der Anmeldemaske einverstanden erklärt hatten:
 	</p>
 	<h3><b i18n:translate="">Contacts</b></h3>
-	<p><b i18n:translate="">Anrede</b><b>:</b> <span tal:content="data/gender"></span></p>
+	<p><b i18n:translate="">Anrede</b><b>:</b> <span tal:content="python:data.getGender(data)"></span></p>
 	<p><b i18n:translate="">Name</b><b>:</b> <span tal:content="data/firstname"></span></p>
 	<p><b i18n:translate="">Vorname</b><b>:</b> <span tal:content="data/lastname"></span></p>
 	<p><b i18n:translate="">Organization</b><b>:</b> <span tal:content="data/organization"></span></p>
